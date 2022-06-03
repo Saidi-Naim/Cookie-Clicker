@@ -41,16 +41,23 @@ li{
 
 } */
 .mainBtn{
-    background-color: #fff;
+    /* background-color: #fff; */
+    background-color: transparent;
     border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-row: 2;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* grid-row: 2; */
     
 }
+
+.mainCounter {
+    display: flex;
+    justify-content: center;
+}
+
 .mainBtn img{
-    width: 30%;
+    /* width: 30%; */
     height: auto; 
     cursor: pointer;
 }
