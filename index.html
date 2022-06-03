@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1>Cookie-Clicker</h1>
-
+    
     <!-- Container de toute la page -->
     <main class="mainContainer" id="idMainContainer">
         
@@ -22,11 +22,22 @@
         <!-- Container liste Bonus -->
         <div class="score" id="idScore">
             <ul>
-                <li class="bonus1" id="idBonus1">Bonus 1</li>
-                <li class="bonus2" id="idBonus2">Bonus 2</li>
-                <li class="bonus3" id="idBonus3">Bonus 3</li>
-                <li class="bonus4" id="idBonus4">Bonus 4</li>
-                <li class="bonus5" id="idBonus5">Bonus 5</li>
+                <!-- Bouton score et multiplier dans <li bonus> -->
+                <li class="bonus1" id="idBonus1">
+                    <button class="button button1" id="idButton1"><img src="./icons/planet-earth-64.png"> 15  <p>multiplier x2 </p></button>
+                </li>
+                <li class="bonus2" id="idBonus2">
+                    <button class="button button2" id="idButton2"><img src="./icons/moon.png" > 100  <p>multiplier x5</p></button>
+                </li>
+                <li class="bonus3" id="idBonus3">
+                    <button class=" button button3" id="idButton3"><img src="./icons/venus.png"> 300  <p>multiplier x10</p></button>
+                </li>
+                <li class="bonus4" id="idBonus4">
+                    <button class="button button4" id="idButton4"><img src="./icons/neptune.png"> 500  <p>multiplier</p></button>
+                </li>
+                <li class="bonus5" id="idBonus5">
+                    <button class="button button5" id="idButton5"><img src="./icons/sun.png"> 999  <p>multiplier</p></button>
+                </li>
             </ul>
         </div>
     </main>

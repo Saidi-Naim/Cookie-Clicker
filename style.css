@@ -4,8 +4,10 @@
     box-sizing: border-box;
 }
 body{
+    background-image: url(galaxy.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    color: white;
 }
 .mainContainer{
     display: grid;
@@ -21,6 +23,8 @@ body{
 li{
     display: flex;
     list-style-type: none;
+    margin-top: 2%;
+    margin-right: 10%;
 }
 .bonus1, .bonus2, .bonus3, .bonus4, .bonus5{
     justify-content: flex-end;
@@ -29,6 +33,7 @@ li{
 
 /* Main Button and Counter */
 /* .mainCounter{
+.bonus2{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,4 +66,21 @@ li{
 .mainContainer > .counter{
     justify-self: center;
     align-self: center;
+}
+.bonus5{
+    display: flex;
+    justify-content: flex-end;
+    padding: 5%;
+}
+
+.button1, .button2, .button3, .button4, .button5 {
+    padding: 2%;
+    border: none;
+    background-color: transparent;
+    color: white;
+}
+
+.button {
+    cursor: pointer;
+    transition-duration: 0.4s;
 }
