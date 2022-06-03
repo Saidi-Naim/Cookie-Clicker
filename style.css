@@ -3,3 +3,44 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-image: url(./assets/Background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.classContainer{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+.score{
+    grid-column: 2;
+
+}
+li{
+    list-style-type: none;
+}
+.bonus1{
+    display: flex;
+    justify-content: flex-end;
+    padding: 5%;
+}
+.bonus2{
+    display: flex;
+    justify-content: flex-end;
+    padding: 5%;
+}
+.bonus3{
+    display: flex;
+    justify-content: flex-end;
+    padding: 5%;
+}
+.bonus4{
+    display: flex;
+    justify-content: flex-end;
+    padding: 5%;
+}
+.bonus5{
+    display: flex;
+    justify-content: flex-end;
+    padding: 5%;
+}
