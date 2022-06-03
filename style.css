@@ -4,43 +4,61 @@
     box-sizing: border-box;
 }
 body{
-    background-image: url(./assets/Background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
-.classContainer{
+.mainContainer{
     display: grid;
     grid-template-columns: 3fr 1fr;
+    
 }
+
+/* Bonus */
 .score{
     grid-column: 2;
-
+    color: #ffbe01;
 }
 li{
+    display: flex;
     list-style-type: none;
 }
-.bonus1{
-    display: flex;
+.bonus1, .bonus2, .bonus3, .bonus4, .bonus5{
     justify-content: flex-end;
     padding: 5%;
 }
-.bonus2{
+
+/* Main Button and Counter */
+/* .mainCounter{
     display: flex;
-    justify-content: flex-end;
-    padding: 5%;
+    justify-content: center;
+    align-items: center;
+    grid-row: 2;
+
+} */
+.mainBtn{
+    background-color: #fff;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row: 2;
+    
 }
-.bonus3{
-    display: flex;
-    justify-content: flex-end;
-    padding: 5%;
+.mainBtn img{
+    width: 30%;
+    height: auto; 
+    cursor: pointer;
 }
-.bonus4{
+.counter{
     display: flex;
-    justify-content: flex-end;
-    padding: 5%;
+    border: 2px dotted;
+    width: 20%;
+    height: 30%;
+    justify-content: center;
+    align-items: center;
+    font-size:xx-large;
 }
-.bonus5{
-    display: flex;
-    justify-content: flex-end;
-    padding: 5%;
+.mainContainer > .counter{
+    justify-self: center;
+    align-self: center;
 }
