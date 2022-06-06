@@ -51,7 +51,7 @@ Make it so that, if the player doesn’t have the points to purchase a multiplie
 Your cookie clicker must be pretty, make it look good with CSS or some extra JavaScript.
 
 ##### Image credit:
-Background  image of galaxy by Francesco Ungaro on Pexels.
-Images from FlatIcons.
+Background  image of galaxy by Francesco Ungaro on Pexels.   
+Images from FlatIcons.      
 
 #### Thank you for reading. 
