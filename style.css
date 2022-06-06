@@ -52,6 +52,7 @@ li{
 
 } */
 .mainBtn{
+    background: none;
     /* background-color: #fff; */
     background-color: transparent;
     border: none;
