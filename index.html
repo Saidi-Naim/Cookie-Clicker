@@ -4,7 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link style.css -->
     <link rel="stylesheet" href="./style.css" />
+    <!-- link google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+    <!-- font awesome icons -->
+    <script src="https://kit.fontawesome.com/b0a60d99d5.js" crossorigin="anonymous"></script>
     <title>Cookie-Clicker</title>
 </head>
 <body>
@@ -15,7 +22,7 @@
         <!-- Container counter button -->
         <div class="mainCounter">
         <!-- Counter -->
-        <p class="counter" id="idCounter">0</p>
+        <p class="counter" id="idCounter">10000000</p>
         <!-- Main Button -->
         <button class="mainBtn" id="idMainBtn">
             <img src="./assets/astronaute.png"></button>
@@ -24,24 +31,42 @@
         <!-- Container liste Bonus -->
         <div class="score" id="idScore">
             <ul>
-                <!-- Bouton score et multiplier dans <li bonus> -->
+                <!-- Bouton score et multiplier et nombre acheté dans <li bonus> -->
                 <li class="bonus1" id="idBonus1">
-                    <button class="button button1" id="idButton1"><img src="./icons/planet-earth-64.png"> 15  <p>multiplier x2 </p></button>
+                    <button class="button button1" id="idButton1"><img class="imageEarth" src="./icons/planet-earth-64.png"> 015  
+                        <p class="multiplier1" id="idMultiplier1">multiplier x2</p>
+                        <p class="nombreBonus1" id="idNombreBonus1">Acheté 1x</p>
+                    </button>         
                 </li>
                 <li class="bonus2" id="idBonus2">
-                    <button class="button button2" id="idButton2"><img src="./icons/moon.png" > 100  <p>multiplier x5</p></button>
+                    <button class="button button2" id="idButton2"><img class="imageMoon" src="./icons/moon.png" > 100  
+                        <p class="multipler2" id="idMultiplier2">multiplier x5</p>
+                        <p class="nombreBonus2" id="idNombreBonus2">Acheté 1x</p>
+                    </button>
                 </li>
                 <li class="bonus3" id="idBonus3">
-                    <button class=" button button3" id="idButton3"><img src="./icons/venus.png"> 300  <p>multiplier x10</p></button>
+                    <button class=" button button3" id="idButton3"><img class="imageVenus" src="./icons/venus.png"> 300  
+                        <p class="multiplier3" id="idMultiplier3">multiplier x10</p>
+                        <p class="nombreBonus3" id="idNombreBonus3">Acheté 1x</p>
+                    </button>
                 </li>
                 <li class="bonus4" id="idBonus4">
-                    <button class="button button4" id="idButton4"><img src="./icons/neptune.png"> 500  <p>multiplier</p></button>
+                    <button class="button button4" id="idButton4"><img class="imageNeptune" src="./icons/neptune.png"> 500  
+                        <p class="multiplier4" id="idMultiplier4">multiplier</p>
+                        <p class="nombreBonus4" id="idNombreBonus4">Acheté 1x</p>
+                    </button>
                 </li>
                 <li class="bonus5" id="idBonus5">
-                    <button class="button button5" id="idButton5"><img src="./icons/sun.png"> 999  <p>multiplier</p></button>
+                    <button class="button button5" id="idButton5"><img class="imageSun" src="./icons/sun.png"> 999  
+                        <p class="multiplier5" id="idMultiplier5">multiplier</p>
+                        <p class="nombreBonus5" id="idNombreBonus5">Acheté 1x</p>
+                    </button>
                 </li>
             </ul>
         </div>
     </main>
+    <footer>
+        <i class="fa-regular fa-copyright"></i>
+    </footer>
 </body>
 </html>
