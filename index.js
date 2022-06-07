@@ -106,10 +106,12 @@ idButton4.addEventListener('click' ,()=> {
 })
 
 // Bonus 30 
+var container = document.querySelector('.container-timer')
 var timerBonus = document.querySelector('.reverse-timer');
 var idBonus5 = document.getElementById('idBonus5')
 idBonus5.addEventListener('click', ()=> {
     timerBonus.classList.remove('desabled')
+    container.classList.remove('desabled')
 })
 
 
