@@ -145,7 +145,39 @@ li{
     }
 }
 
+/* image rotation on hover */
 /* .imageEarth:hover, .imageMoon:hover, .imageVenus:hover, .imageNeptune:hover, .imageSun:hover {
     transform: rotate(360deg);
 } */
 
+/* display instruction on hover */
+/* .hide {
+    display:none;
+}
+.button1:hover + .hide {
+    display:block;
+    color:#ffbe01;
+} */
+
+.hide {
+    display:none;
+}
+.elementHide:hover + .hide {
+    display:inline;
+    color:#ffbe01;
+    font-size: 0.7em;
+}
+.elementHide {
+    margin-right: 18%;
+}
+
+.Earth {
+    margin-right: 18%;
+}
+
+.multiplier5, .multiplier4 {
+    display: none;
+}
+li:hover {
+    color: blueviolet;
+}
