@@ -24,6 +24,7 @@ body{
     grid-column: 2;
     color: #ffbe01;
     margin: 1%;
+    position:relative;
     
 }
 li{
@@ -31,6 +32,7 @@ li{
     list-style-type: none;
     /* margin-top: 2%; */
     margin-right: 10%;
+    margin-bottom: 10%;
     
 }
 .bonus1, .bonus2, .bonus3, .bonus4, .bonus5{
@@ -124,6 +126,7 @@ li{
     font-family: 'Kdam Thmor Pro', sans-serif;
     letter-spacing: 1px;
     text-align: right;
+    opacity: 0.9;
      
 }
 
@@ -161,23 +164,37 @@ li{
 
 .hide {
     display:none;
+    margin: 22% 15% 5% 5%;
+    z-index: 2;
+    /* padding: 5px; */
 }
 .elementHide:hover + .hide {
-    display:inline;
+    display: inline-block;
+    position: absolute;
     color:#ffbe01;
     font-size: 0.7em;
 }
 .elementHide {
-    margin-right: 18%;
+    margin-right: 20%;
+    text-align: left;
 }
 
-.Earth {
-    margin-right: 18%;
-}
-
-.multiplier5, .multiplier4 {
+.multiplier5, .multiplier4, .multiplier3, .multiplier2, .multiplier1 {
     display: none;
 }
-li:hover {
-    color: blueviolet;
+
+.bonus1:hover {
+    color:royalblue;
+}
+.bonus2:hover {
+    color:rgb(150, 148, 148);
+}
+.bonus3:hover {
+    color:crimson;
+}
+.bonus4:hover {
+    color:rgb(116, 159, 238);
+}
+.bonus5:hover {
+    color:orangered;
 }
