@@ -133,9 +133,19 @@ li{
 }
 
 .imageEarth, .imageMoon, .imageVenus, .imageNeptune, .imageSun {
-    transition: transform 6s ease-in-out;
+    /* transition: transform 6s ease-in-out; */
+    animation: rotation 6s infinite linear;
 }
-.imageEarth:hover, .imageMoon:hover, .imageVenus:hover, .imageNeptune:hover, .imageSun:hover {
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+/* .imageEarth:hover, .imageMoon:hover, .imageVenus:hover, .imageNeptune:hover, .imageSun:hover {
     transform: rotate(360deg);
-}
+} */
 
