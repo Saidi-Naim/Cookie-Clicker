@@ -77,8 +77,8 @@ multi_1.addEventListener('click',()=>{
 
 // function mutliplicateur_2
 multi_2.addEventListener('click',()=>{
-    if(total>=50*counter_price_2){
-    total-=50*counter_price_2;
+    if(total>=100*counter_price_2){
+    total-=100*counter_price_2;
     counter_price_2++;
     counter_2++;
     pointsPerClick = pointsPerClick+5;
