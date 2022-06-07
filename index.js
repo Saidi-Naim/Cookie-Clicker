@@ -84,16 +84,33 @@ multi_2.addEventListener('click',()=>{
     pointsPerClick = pointsPerClick+5;
     multi_2 = true;
     display.innerHTML = total;
+    if (counter_2==5){
+        multi_stop.setAttribute('desabled', '')            
+        multi_stop.style.backgroundColor = 'red';
+        multi_stop.style.color='white' ;
+        multi_stop.innerHTML = 'you can not use'
+    }
 }})
 
-
 // auto Click
-// var time = setInterval(function () {
-//     total = total + pointsPerClick;
-//     display.innerHTML = total
-// }, 1000);
+var idButton4 = document.getElementById('idButton4')
+idButton4.addEventListener('click' ,()=> {
+    if(total >= 500){
 
+        var time = setInterval(function () {
+            total +=  1;
+            display.innerHTML = total
+        }, 1000);
+    }
+    
+})
 
+// Bonus 30 
+var timerBonus = document.querySelector('.reverse-timer');
+var idBonus5 = document.getElementById('idBonus5')
+idBonus5.addEventListener('click', ()=> {
+    timerBonus.classList.remove('desabled')
+})
 
 
 
