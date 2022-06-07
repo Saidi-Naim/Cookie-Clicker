@@ -200,3 +200,8 @@ li{
         background-color: rgb(152,15,10);
     }
 }
+/* secound count bonus */
+.secound-count{
+    position: absolute;
+    transform: rotate(180deg);
+}

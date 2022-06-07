@@ -109,11 +109,30 @@ idButton4.addEventListener('click' ,()=> {
 var container = document.querySelector('.container-timer')
 var timerBonus = document.querySelector('.reverse-timer');
 var idBonus5 = document.getElementById('idBonus5')
-idBonus5.addEventListener('click', ()=> {
-    timerBonus.classList.remove('desabled')
-    container.classList.remove('desabled')
-})
+var secoundCount = document.querySelector('.secound-count')
 
+idBonus5.addEventListener('click', ()=> {
+    container.classList.remove('desabled')
+    timerBonus.classList.remove('desabled')
+    
+    var text = ['29 s', '28 s' , '27 s' , '26 s' , '25 s' , '24 s', '23 s', '22 s','21 s','20 s','19 s','18 s', '17 s' , '16 s' ,'15 s','14 s','13 s', '12 s', '11 s' , '10 s' , '9 s','8 s','7 s','6 s', '5 s', '4 s', '3 s', '2 s', '1 s',''];
+    var counter = 0;
+    var inst = setInterval(change, 1000);
+    function change(){
+        secoundCount.innerHTML = text[counter];
+        counter++;
+        if (counter >= text.length) { 
+            counter = 0;
+            clearInterval(inst); 
+        }
+
+    }
+        var desableContainerTimer = setInterval(desable, 30000)
+        function desable(){
+            container.classList.add('desabled')
+        }
+        // clearInterval(desableContainerTimer)
+})
 
 
 
