@@ -111,7 +111,16 @@ else
 // function mutliplicateur_1
 multi_1.addEventListener('click',earth);
 
-function earth ()
+
+/**
+ * click on earth planet
+ * @function
+ * @param {number} pointsPerClick - nombre de points par clic.
+ * @param {number} total - Total points.
+ * @returns {number, innerHTML} - points par clic, mise à jour du html  
+ * @returns {boolean} - multi_1 = true
+ */
+function earth (pointsPerClick, total)
 {
     if(total>=15*counter_price_1){
         total-=15*counter_price_1;
@@ -178,6 +187,9 @@ var secoundCount = document.querySelector('.secound-count')
 
 idBonus5.addEventListener('click', ()=> {
     pointsPerClick = pointsPerClick *2;
+    counter_1*2;
+    counter_2*2;
+    counter_3*2;
     if (pointsPerClick==0)
     { pointsPerClick = 2;}
     container.classList.remove('desabled')
