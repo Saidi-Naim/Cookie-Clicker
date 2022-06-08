@@ -269,3 +269,24 @@ li{
 .bonus5:hover {
     color:orangered;
 }
+
+.bonus1 span{
+    position: absolute;
+    float: left;
+} 
+.bonus2 span{
+    position: absolute;
+    float: left;
+}
+.bonus3 span{
+    position: absolute;
+    float: left;
+}
+.bonus4 span{
+    position: absolute;
+    float: left;
+}
+.bonus5 span{
+    position: absolute;
+    float: left;
+}

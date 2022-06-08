@@ -3,6 +3,7 @@ var plus1Btn = document.getElementById('idMainBtn')
 var multi_1 = document.getElementById('idButton1')
 var multi_2 = document.getElementById('idButton2')
 var display_stock_terre = document.getElementById('idNombreBonus1')
+
 var stock_terre = 3;
 
 var total = 0;
@@ -22,19 +23,26 @@ var pointsPerClick = 1;
 function oneHandler(){
 
 // check if multi available
-if (counter_1==5)
+let bonus1 = document.querySelector('.bonus1')
+if (counter_1==3)
 {
-    body.style.display = none;
-    // multi_1.style.backgroundColor = 'red';   >Work on progress
-    // multi_1.style.color='white' ;
-    // multi_1.innerHTML = 'you can not use'
+    let span1 = document.createElement('span');
+    let text1 = document.createTextNode('you cant click');
+    span1.appendChild(text1)
+    bonus1.appendChild(span1)
+    span1.style.backgroundColor = 'red'
+    span1.style.padding= "2px 7px"
 }
 
+let bonus2 = document.querySelector('.bonus2')
 if (counter_2==5)
 {
-    // multi_2.style.backgroundColor = 'red';    >Work on progress
-    // multi_2.style.color='white' ;
-    // multi_2.innerHTML = 'you can not use'
+    let span1 = document.createElement('span');
+    let text1 = document.createTextNode('you cant click');
+    span1.appendChild(text1)
+    bonus2.appendChild(span1)
+    span1.style.backgroundColor = 'red'
+    span1.style.padding= "2px 7px"
 }
 
 // get points
@@ -138,6 +146,8 @@ idBonus5.addEventListener('click', ()=> {
         }
         // clearInterval(desableContainerTimer)
 })
+
+
 
 
 
