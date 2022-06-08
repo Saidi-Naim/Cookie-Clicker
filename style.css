@@ -45,6 +45,7 @@ body{
     grid-column: 2;
     color: #ffbe01;
     margin: 1%;
+    position:relative;
     
 }
 li{
@@ -52,6 +53,7 @@ li{
     list-style-type: none;
     /* margin-top: 2%; */
     margin-right: 10%;
+    margin-bottom: 10%;
     
 }
 .bonus1, .bonus2, .bonus3, .bonus4, .bonus5{
@@ -160,6 +162,7 @@ li{
     font-family: 'Kdam Thmor Pro', sans-serif;
     letter-spacing: 1px;
     text-align: right;
+    opacity: 0.9;
      
 }
 
@@ -169,10 +172,16 @@ li{
 }
 
 .imageEarth, .imageMoon, .imageVenus, .imageNeptune, .imageSun {
-    transition: transform 6s ease-in-out;
+    /* transition: transform 6s ease-in-out; */
+    animation: rotation 6s infinite linear;
 }
-.imageEarth:hover, .imageMoon:hover, .imageVenus:hover, .imageNeptune:hover, .imageSun:hover {
-    transform: rotate(360deg);
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
 }
 
 /* Younes */
@@ -240,4 +249,54 @@ li{
 .secound-count{
     position: absolute;
     transform: rotate(180deg);
+}
+/* image rotation on hover */
+/* .imageEarth:hover, .imageMoon:hover, .imageVenus:hover, .imageNeptune:hover, .imageSun:hover {
+    transform: rotate(360deg);
+} */
+
+/* display instruction on hover */
+/* .hide {
+    display:none;
+}
+.button1:hover + .hide {
+    display:block;
+    color:#ffbe01;
+} */
+
+.hide {
+    display:none;
+    margin: 22% 15% 5% 5%;
+    z-index: 2;
+    /* padding: 5px; */
+}
+.elementHide:hover + .hide {
+    display: inline-block;
+    position: absolute;
+    color:#ffbe01;
+    font-size: 0.7em;
+}
+.elementHide {
+    margin-right: 20%;
+    text-align: left;
+}
+
+.multiplier5, .multiplier4, .multiplier3, .multiplier2, .multiplier1 {
+    display: none;
+}
+
+.bonus1:hover {
+    color:royalblue;
+}
+.bonus2:hover {
+    color:rgb(150, 148, 148);
+}
+.bonus3:hover {
+    color:crimson;
+}
+.bonus4:hover {
+    color:rgb(116, 159, 238);
+}
+.bonus5:hover {
+    color:orangered;
 }
