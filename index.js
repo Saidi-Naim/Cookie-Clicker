@@ -45,16 +45,36 @@ if (counter_1==3)
 }
 
 let bonus2 = document.querySelector('.bonus2')
-if (counter_2==5)
+if (counter_2==3)
 {
-    let span1 = document.createElement('span');
-    let text1 = document.createTextNode('you cant click');
-    span1.appendChild(text1)
-    bonus2.appendChild(span1)
-    span1.style.backgroundColor = 'red'
-    span1.style.padding= "2px 7px"
+    let span2 = document.createElement('span');
+    let text2 = document.createTextNode('you cant click');
+    span2.appendChild(text2)
+    bonus2.appendChild(span2)
+    span2.style.backgroundColor = 'red'
+    span2.style.padding= "2px 7px"
 }
 
+let bonus3 = document.querySelector('.bonus3')
+if (counter_3==3)
+{
+    let span3 = document.createElement('span');
+    let text3 = document.createTextNode('you cant click');
+    span3.appendChild(text3)
+    bonus3.appendChild(span3)
+    span3.style.backgroundColor = 'red'
+    span3.style.padding= "2px 7px"
+}
+let bonus4 = document.querySelector('.bonus4')
+if (counter_4==3)
+{
+    let span4 = document.createElement('span');
+    let text4 = document.createTextNode('you cant click');
+    span4.appendChild(text4)
+    bonus4.appendChild(span4)
+    span4.style.backgroundColor = 'red'
+    span4.style.padding= "2px 7px"
+}
 // get points
 if (multi_1 == true && multi_2 == true && multi_3 == true)
 {
