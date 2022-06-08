@@ -2,6 +2,8 @@ const display = document.getElementById('idCounter')
 var plus1Btn = document.getElementById('idMainBtn')
 var multi_1 = document.getElementById('idButton1')
 var multi_2 = document.getElementById('idButton2')
+var display_stock_terre = document.getElementById('idNombreBonus1')
+var stock_terre = 3;
 
 var total = 0;
 
@@ -12,7 +14,7 @@ let counter_2 = 0;
 let counter_price_1 = 1;
 let counter_price_2 = 1;
 
-var pointsPerClick = 0;
+var pointsPerClick = 1;
 
 
 
@@ -57,7 +59,7 @@ else if (multi_2 == true)
 }
 else
 {
-    total += 1;
+    total += pointsPerClick;
     display.innerHTML = total;
 }}
     
@@ -70,9 +72,11 @@ multi_1.addEventListener('click',()=>{
     total-=15*counter_price_1;
     counter_price_1++;
     counter_1++;
-    pointsPerClick = pointsPerClick+2;
+    pointsPerClick = pointsPerClick+1;
     multi_1 = true;
     display.innerHTML = total;
+    stock_terre--;
+    display_stock_terre.innerHTML = stock_terre
 }})
 
 // function mutliplicateur_2
@@ -81,7 +85,7 @@ multi_2.addEventListener('click',()=>{
     total-=100*counter_price_2;
     counter_price_2++;
     counter_2++;
-    pointsPerClick = pointsPerClick+5;
+    pointsPerClick = pointsPerClick+4;
     multi_2 = true;
     display.innerHTML = total;
     if (counter_2==5){
@@ -98,7 +102,7 @@ idButton4.addEventListener('click' ,()=> {
     if(total >= 500){
         total -= 500;
         var time = setInterval(function () {
-            total +=  1;
+            total +=  pointsPerClick;
             display.innerHTML = total
         }, 1000);
     }
@@ -125,6 +129,7 @@ idBonus5.addEventListener('click', ()=> {
             counter = 0;
             clearInterval(inst); 
         }
+    pointsPerClick = pointsPerClick * 2;
 
     }
         var desableContainerTimer = setInterval(desable, 30000)
