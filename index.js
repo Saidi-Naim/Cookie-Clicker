@@ -120,7 +120,7 @@ multi_1.addEventListener('click',earth);
  * @returns {number, innerHTML} - points par clic, mise à jour du html  
  * @returns {boolean} - multi_1 = true
  */
-function earth (pointsPerClick, total)
+function earth ()
 {
     if(total>=15*counter_price_1){
         total-=15*counter_price_1;
