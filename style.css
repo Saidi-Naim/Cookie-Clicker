@@ -49,12 +49,11 @@ body{
     margin: 1%;
     position: relative;  
 }
-
 .scoreLeft {
     grid-column: 1;
     grid-row: 1;
     color:#ffbe01;
-    margin: 1%;
+    /* margin: 1%; */
     position: relative;
 }
 .scoreLeft li {
@@ -69,7 +68,6 @@ body{
     margin-right: 10%;
     margin-bottom: 27%;  
 }
-
 .bonus1, .bonus2, .bonus3{
     justify-content: flex-end;
     padding: 3%;
@@ -83,8 +81,6 @@ body{
 .nombreBonus1, .nombreBonus2, .nombreBonus3, .nombreBonus4, .nombreBonus5 {
     margin-top: 6%;
 }
-
-
 /* Main click container */
 .mainBtn{
     background: none;
@@ -93,6 +89,7 @@ body{
     display: flex;
     justify-content: center;
     margin: auto;
+    margin-top: 3%;
     grid-column: 2;
 }
 
@@ -126,7 +123,6 @@ body{
         transform: rotate(359deg);
     }
 }
-
 .score img{
     transform: rotate(0deg);
     animation: rotate 10s ease-in infinite;
@@ -135,9 +131,8 @@ body{
 .mainBtn img{
     height: auto; 
     cursor: pointer;
-    margin: 10%;
+    margin-top: 10%;
 }
-
 .counter{
     display: flex;
     width: 50%;
@@ -146,9 +141,19 @@ body{
     align-items: center;
     font-size:xx-large;
     margin: auto;
-    margin-bottom: 5%;
+    margin-top: -1%;
 }
-
+.secondsContainer{
+    display: flex;
+    justify-content: center;
+    
+}
+.perSeconds{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-small;
+}
 .mainCounter p{
     font-size: 3em;
 }
