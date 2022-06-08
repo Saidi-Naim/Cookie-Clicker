@@ -61,8 +61,8 @@ li{
     padding: 3%;
     font-family: 'Kdam Thmor Pro', sans-serif;  
 }
-.score > .scoreLeft > li{
-    grid-column: 1;
+.bonus4, .bonus5{
+    grid-column: 1/1;
 }
 .nombreBonus1, .nombreBonus2, .nombreBonus3, .nombreBonus4, .nombreBonus5 {
     margin-top: 6%;

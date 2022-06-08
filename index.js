@@ -6,6 +6,10 @@ var multi_3 = document.getElementById('idButton3')
 var display_stock_terre = document.getElementById('idNombreBonus1')
 
 var display_stock_lune = document.getElementById('idNombreBonus2')
+var display_stock_mars = document.getElementById('idNombreBonus3')
+var display_price_terre = document.getElementById('price1')
+var display_price_lune = document.getElementById('price2')
+var display_price_mars = document.getElementById('price3')
 var stock_terre = 3;
 var stock_lune = 3;
 var stock_mars = 3;
@@ -52,10 +56,15 @@ if (counter_2==5)
 }
 
 // get points
-if (multi_1 == true && multi_2 == true)
+if (multi_1 == true && multi_2 == true && multi_3 == true)
 {
-    total = counter_1*2 + counter_2*5 +total; 
-    
+    total = counter_1*2 + counter_2*5 + counter_3*10 + total; 
+    console.log (pointsPerClick);
+    display.innerHTML = total;
+}
+else if (multi_1 == true && multi_2 == true)
+{
+    total = counter_1*2 + counter_2*5 + total; 
     console.log (pointsPerClick);
     display.innerHTML = total;
 }
@@ -91,6 +100,7 @@ multi_1.addEventListener('click',()=>{
     display.innerHTML = total;
     stock_terre--;
     display_stock_terre.innerHTML = `Stock x${stock_terre}`
+    display_price_terre.innerHTML = `${counter_price_1*15}`
 }})
 
 // function mutliplicateur_2
@@ -104,16 +114,17 @@ multi_2.addEventListener('click',()=>{
     display.innerHTML = total;
     stock_lune--;
     display_stock_lune.innerHTML = `Stock x${stock_lune}`
-    if (stock_lune==2){
-        multi_2.setAttribute('desabled', '')            
-        multi_2.style.backgroundColor = 'red';
-        multi_2.style.color='white' ;
-        multi_2.innerHTML = 'you can not use'
-    }
+    display_price_lune.innerHTML = `${counter_price_2*100}`
+    // if (stock_lune==2){
+    //     multi_2.setAttribute('desabled', '')            
+    //     multi_2.style.backgroundColor = 'red';
+    //     multi_2.style.color='white' ;
+    //     multi_2.innerHTML = 'you can not use'
+    // }
 }})
 
 // function mutliplicateur_3
-multi_1.addEventListener('click',()=>{
+multi_3.addEventListener('click',()=>{
     if(total>=300*counter_price_3){
     total-=300*counter_price_3;
     counter_price_3++;
@@ -123,6 +134,7 @@ multi_1.addEventListener('click',()=>{
     display.innerHTML = total;
     stock_mars--;
     display_stock_mars.innerHTML = `Stock x${stock_mars}`
+    display_price_mars.innerHTML = `${counter_price_3*300}`
 }})
 
 // auto Click
