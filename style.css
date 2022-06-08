@@ -47,7 +47,7 @@ body{
     grid-column: 3;
     color: #ffbe01;
     margin: 1%;
-    position:relative;  
+    position: relative;  
 }
 
 .scoreLeft {
@@ -70,7 +70,8 @@ body{
     margin-bottom: 15%;  
 }
 
-.bonus1, .bonus2, .bonus3{
+
+.bonus1, .bonus2, .bonus3, .bonus4, .bonus5{
     justify-content: flex-end;
     padding: 3%;
     /* font-family: 'Kdam Thmor Pro', sans-serif;   */
@@ -96,7 +97,7 @@ body{
     grid-column: 2;
 }
 
-.mainCounter {
+.mainCounter{
     justify-content: center;
     padding: 1%;
     margin: 5%;
@@ -300,4 +301,25 @@ body{
 }
 .bonus5:hover {
     color:#ff4400;
+}
+
+.bonus1 span{
+    position: absolute;
+    float: left;
+} 
+.bonus2 span{
+    position: absolute;
+    float: left;
+}
+.bonus3 span{
+    position: absolute;
+    float: left;
+}
+.bonus4 span{
+    position: absolute;
+    float: left;
+}
+.bonus5 span{
+    position: absolute;
+    float: left;
 }
