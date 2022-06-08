@@ -96,7 +96,7 @@ multi_2.addEventListener('click',()=>{
 var idButton4 = document.getElementById('idButton4')
 idButton4.addEventListener('click' ,()=> {
     if(total >= 500){
-
+        total -= 500;
         var time = setInterval(function () {
             total +=  1;
             display.innerHTML = total
@@ -113,9 +113,6 @@ idBonus5.addEventListener('click', ()=> {
     timerBonus.classList.remove('desabled')
     container.classList.remove('desabled')
 })
-
-
-
 
 
 
