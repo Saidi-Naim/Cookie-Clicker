@@ -53,7 +53,6 @@ body{
 .scoreLeft {
     grid-column: 1;
     grid-row: 1;
-
     color:#ffbe01;
     margin: 1%;
     position: relative;
