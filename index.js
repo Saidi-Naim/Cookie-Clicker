@@ -34,6 +34,7 @@ function oneHandler(){
 
 // check if multi available
 let bonus1 = document.querySelector('.bonus1')
+let imageEarth = document.querySelector('.imageEarth')
 if (counter_1==3)
 {
     let span1 = document.createElement('span');
@@ -41,18 +42,29 @@ if (counter_1==3)
     span1.appendChild(text1)
     bonus1.appendChild(span1)
     span1.style.backgroundColor = 'red'
-    span1.style.padding= "2px 7px"
+    span1.style.padding= "2px 7px" ;
 }
 
 let bonus2 = document.querySelector('.bonus2')
 if (counter_2==3)
 {
-    let span1 = document.createElement('span');
-    let text1 = document.createTextNode('you cant click');
-    span1.appendChild(text1)
-    bonus2.appendChild(span1)
-    span1.style.backgroundColor = 'red'
-    span1.style.padding= "2px 7px"
+    let span2 = document.createElement('span');
+    let text2 = document.createTextNode('you cant click');
+    span2.appendChild(text2)
+    bonus2.appendChild(span2)
+    span2.style.backgroundColor = 'red'
+    span2.style.padding= "2px 7px"
+}
+
+let bonus3 = document.querySelector('.bonus3')
+if (counter_3==3)
+{
+    let span3 = document.createElement('span');
+    let text3 = document.createTextNode('you cant click');
+    span3.appendChild(text3)
+    bonus3.appendChild(span3)
+    span3.style.backgroundColor = 'red'
+    span3.style.padding= "2px 7px"
 }
 
 // get points
