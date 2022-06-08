@@ -1,9 +1,9 @@
 # Cookie-Clicker
 ### Team Challenge: 
-##### Guillaume Breyer     
-##### Sophie Cheng   
-##### Naïm Saidi 
-##### Younes Sheikhlar
+Guillaume Breyer      
+Sophie Cheng    
+Naïm Saidi     
+Younes Sheikhlar    
    
 ### Link:  
    
