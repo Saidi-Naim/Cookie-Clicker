@@ -46,23 +46,24 @@ body{
     grid-column: 3;
     color: #ffbe01;
     margin: 1%;
-    position:relative;  
+    position: relative;  
 }
-
-li{
+.scoreLeft {
+    grid-column: 1;
+    grid-rows: 1;
+}
+.score li{
     display: flex;
     list-style-type: none;
     margin-right: 10%;
     margin-bottom: 10%;  
 }
 
+
 .bonus1, .bonus2, .bonus3, .bonus4, .bonus5{
     justify-content: flex-end;
     padding: 3%;
     font-family: 'Kdam Thmor Pro', sans-serif;  
-}
-.bonus4, .bonus5{
-    grid-column: 1/1;
 }
 .nombreBonus1, .nombreBonus2, .nombreBonus3, .nombreBonus4, .nombreBonus5 {
     margin-top: 6%;
@@ -79,7 +80,7 @@ li{
     grid-column: 2;
 }
 
-.mainCounter {
+.mainCounter{
     justify-content: center;
     padding: 1%;
     margin: 5%;
