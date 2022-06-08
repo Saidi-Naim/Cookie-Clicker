@@ -236,3 +236,8 @@ li{
         background-color: #980f0a;
     }
 }
+/* secound count bonus */
+.secound-count{
+    position: absolute;
+    transform: rotate(180deg);
+}
