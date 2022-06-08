@@ -43,8 +43,11 @@ if (counter_1==3)
     bonus1.appendChild(span1)
     span1.style.backgroundColor = 'red'
     span1.style.padding= "2px 7px" ;
+    imageEarth.classList.add('img-nonColor')
+    
 }
 
+let imageMoon = document.querySelector('.imageMoon')
 let bonus2 = document.querySelector('.bonus2')
 if (counter_2==3)
 {
@@ -54,8 +57,11 @@ if (counter_2==3)
     bonus2.appendChild(span2)
     span2.style.backgroundColor = 'red'
     span2.style.padding= "2px 7px"
+    imageMoon.classList.add('img-nonColor')
+
 }
 
+let imageVenus = document.querySelector('.imageVenus')
 let bonus3 = document.querySelector('.bonus3')
 if (counter_3==3)
 {
@@ -65,6 +71,7 @@ if (counter_3==3)
     bonus3.appendChild(span3)
     span3.style.backgroundColor = 'red'
     span3.style.padding= "2px 7px"
+    imageVenus.classList.add('img-nonColor')
 }
 
 // get points
@@ -119,7 +126,7 @@ multi_1.addEventListener('click',()=>{
     display.innerHTML = total;
     stock_terre--;
     display_stock_terre.innerHTML = `Stock x${stock_terre}`
-    display_price_terre.innerHTML = `${counter_price_1*15}`
+    display_price_terre.innerHTML = `${counter_price_1*15}` 
 }})
 
 // function mutliplicateur_2

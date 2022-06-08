@@ -53,8 +53,6 @@ body{
 .scoreLeft {
     grid-column: 1;
     grid-row: 1;
-<<<<<<< HEAD
-=======
     color:#ffbe01;
     margin: 1%;
     position: relative;
@@ -63,7 +61,6 @@ body{
     display: flex;
     margin-left: 10%;
     margin-bottom: 15;
->>>>>>> da15bf279ac1e3010a3fdbee417cb4f569f831dc
 }
 
 .score li{
@@ -332,6 +329,6 @@ body{
     margin-left: 5px;
 }
 
-.disabled-img{
+.img-nonColor{
     filter: grayscale();
 }
