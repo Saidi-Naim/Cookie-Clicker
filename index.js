@@ -34,6 +34,7 @@ function oneHandler(){
 
 // check if multi available
 let bonus1 = document.querySelector('.bonus1')
+let imageEarth = document.querySelector('.imageEarth')
 if (counter_1==3)
 {
     let span1 = document.createElement('span');
@@ -41,18 +42,29 @@ if (counter_1==3)
     span1.appendChild(text1)
     bonus1.appendChild(span1)
     span1.style.backgroundColor = 'red'
-    span1.style.padding= "2px 7px"
+    span1.style.padding= "2px 7px" ;
 }
 
 let bonus2 = document.querySelector('.bonus2')
 if (counter_2==3)
 {
-    let span1 = document.createElement('span');
-    let text1 = document.createTextNode('you cant click');
-    span1.appendChild(text1)
-    bonus2.appendChild(span1)
-    span1.style.backgroundColor = 'red'
-    span1.style.padding= "2px 7px"
+    let span2 = document.createElement('span');
+    let text2 = document.createTextNode('you cant click');
+    span2.appendChild(text2)
+    bonus2.appendChild(span2)
+    span2.style.backgroundColor = 'red'
+    span2.style.padding= "2px 7px"
+}
+
+let bonus3 = document.querySelector('.bonus3')
+if (counter_3==3)
+{
+    let span3 = document.createElement('span');
+    let text3 = document.createTextNode('you cant click');
+    span3.appendChild(text3)
+    bonus3.appendChild(span3)
+    span3.style.backgroundColor = 'red'
+    span3.style.padding= "2px 7px"
 }
 
 // get points
@@ -97,18 +109,24 @@ else
 
 
 // function mutliplicateur_1
-multi_1.addEventListener('click',()=>{
+multi_1.addEventListener('click',earth);
+
+function earth ()
+{
     if(total>=15*counter_price_1){
-    total-=15*counter_price_1;
-    counter_price_1++;
-    counter_1++;
-    pointsPerClick = pointsPerClick+2;
-    multi_1 = true;
-    display.innerHTML = total;
-    stock_terre--;
-    display_stock_terre.innerHTML = `Stock x${stock_terre}`
-    display_price_terre.innerHTML = `${counter_price_1*15}`
-}})
+        total-=15*counter_price_1;
+        counter_price_1++;
+        counter_1++;
+        pointsPerClick = pointsPerClick+2;
+        multi_1 = true;
+        display.innerHTML = total;
+        stock_terre--;
+        display_stock_terre.innerHTML = `Stock x${stock_terre}`
+        display_price_terre.innerHTML = `${counter_price_1*15}`
+}}
+
+
+
 
 // function mutliplicateur_2
 multi_2.addEventListener('click',()=>{
@@ -122,12 +140,6 @@ multi_2.addEventListener('click',()=>{
     stock_lune--;
     display_stock_lune.innerHTML = `Stock x${stock_lune}`
     display_price_lune.innerHTML = `${counter_price_2*100}`
-    // if (stock_lune==2){
-    //     multi_2.setAttribute('desabled', '')            
-    //     multi_2.style.backgroundColor = 'red';
-    //     multi_2.style.color='white' ;
-    //     multi_2.innerHTML = 'you can not use'
-    // }
 }})
 
 // function mutliplicateur_3
@@ -165,6 +177,9 @@ var idBonus5 = document.getElementById('idBonus5')
 var secoundCount = document.querySelector('.secound-count')
 
 idBonus5.addEventListener('click', ()=> {
+    pointsPerClick = pointsPerClick *2;
+    if (pointsPerClick==0)
+    { pointsPerClick = 2;}
     container.classList.remove('desabled')
     timerBonus.classList.remove('desabled')
     
@@ -178,29 +193,16 @@ idBonus5.addEventListener('click', ()=> {
             counter = 0;
             clearInterval(inst); 
         }
-    pointsPerClick = pointsPerClick * 2;
+    
 
     }
         var desableContainerTimer = setInterval(desable, 30000)
         function desable(){
             container.classList.add('desabled')
+            pointsPerClick = pointsPerClick/2;
         }
         // clearInterval(desableContainerTimer)
 })
 
 
 
-
-
-// bonus button
-// setInterval (bonus, 30000);
-// function bonus() {
-//     setInterval (function(){
-//     pointsPerClick = pointsPerClick*2;
-//     total += pointsPerClick;
-//     display.innerHTML = total;
-//     },1000)
-// }
-
-
-// test display when unlocked
