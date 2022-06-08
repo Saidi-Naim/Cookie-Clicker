@@ -59,19 +59,18 @@ body{
 }
 .scoreLeft li {
     display: flex;
+    list-style-type: none;
     margin-left: 10%;
-    margin-bottom: 15;
+    margin-bottom: 27%;
 }
-
 .score li{
     display: flex;
     list-style-type: none;
     margin-right: 10%;
-    margin-bottom: 15%;  
+    margin-bottom: 27%;  
 }
 
-
-.bonus1, .bonus2, .bonus3, .bonus4, .bonus5{
+.bonus1, .bonus2, .bonus3{
     justify-content: flex-end;
     padding: 3%;
     /* font-family: 'Kdam Thmor Pro', sans-serif;   */
@@ -79,8 +78,8 @@ body{
 .bonus4, .bonus5{
     justify-content: flex-start;
     padding: 5%;
+    margin: 10%;
 }
-
 .nombreBonus1, .nombreBonus2, .nombreBonus3, .nombreBonus4, .nombreBonus5 {
     margin-top: 6%;
 }
@@ -169,7 +168,7 @@ body{
     text-align: right;
     opacity: 0.9;
 }
-.button4, .button5 {
+.button4, .button5{
     padding-left: 5%;
     border: none;
     background-color: transparent;
@@ -266,8 +265,15 @@ body{
 /* bonus display instructions on hover */
 .hide {
     display: none;
-    margin: 25% 28% 5% 5%;
+    margin: 25% 28% 15% 5%;
     z-index: 2;
+    text-align: left;
+}
+.hide2 {
+    display: none;
+    margin: 28% 28% 5% 5%;
+    z-index: 2;
+    text-align: right;
 }
 
 .elementHide:hover + .hide {
@@ -279,8 +285,16 @@ body{
 
 .elementHide {
     margin-right: 20%;
-
-
+    text-align: left;
+}
+.elementHide2 {
+    margin-left: 30%;
+}
+.elementHide2:hover + .hide2 {
+    display: inline-block;
+    position: absolute;
+    color:#ffbe01;
+    font-size: 0.7em;
 }
 
 .multiplier5, .multiplier4, .multiplier3, .multiplier2, .multiplier1 {
