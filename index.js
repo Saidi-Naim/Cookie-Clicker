@@ -25,7 +25,7 @@ let counter_price_1 = 1;
 let counter_price_2 = 1;
 let counter_price_3 = 1;
 
-var pointsPerClick = 1;
+var pointsPerClick = 0;
 
 
 
@@ -45,7 +45,7 @@ if (counter_1==3)
 }
 
 let bonus2 = document.querySelector('.bonus2')
-if (counter_2==5)
+if (counter_2==3)
 {
     let span1 = document.createElement('span');
     let text1 = document.createTextNode('you cant click');
@@ -80,9 +80,16 @@ else if (multi_2 == true)
     console.log (pointsPerClick);
     display.innerHTML = total;
 }
+else if (multi_3 == true)   
+{
+    total = counter_3*10+total; 
+    console.log (pointsPerClick);
+    display.innerHTML = total;
+}
 else
 {
-    total += pointsPerClick;
+    total += 1;
+    console.log (pointsPerClick);
     display.innerHTML = total;
 }}
     
@@ -95,7 +102,7 @@ multi_1.addEventListener('click',()=>{
     total-=15*counter_price_1;
     counter_price_1++;
     counter_1++;
-    pointsPerClick = pointsPerClick+1;
+    pointsPerClick = pointsPerClick+2;
     multi_1 = true;
     display.innerHTML = total;
     stock_terre--;
@@ -109,7 +116,7 @@ multi_2.addEventListener('click',()=>{
     total-=100*counter_price_2;
     counter_price_2++;
     counter_2++;
-    pointsPerClick = pointsPerClick+4;
+    pointsPerClick = pointsPerClick+5;
     multi_2 = true;
     display.innerHTML = total;
     stock_lune--;
@@ -129,7 +136,7 @@ multi_3.addEventListener('click',()=>{
     total-=300*counter_price_3;
     counter_price_3++;
     counter_3++;
-    pointsPerClick = pointsPerClick+9;
+    pointsPerClick = pointsPerClick+10;
     multi_3 = true;
     display.innerHTML = total;
     stock_mars--;
@@ -144,6 +151,7 @@ idButton4.addEventListener('click' ,()=> {
         total -= 500;
         var time = setInterval(function () {
             total +=  pointsPerClick;
+            console.log (pointsPerClick);
             display.innerHTML = total
         }, 1000);
     }
