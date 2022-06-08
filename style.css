@@ -266,7 +266,6 @@ body{
     position: absolute;
     transform: rotate(180deg);
 }
-
 /* bonus display instructions on hover */
 .hide {
     display: none;
