@@ -97,18 +97,24 @@ else
 
 
 // function mutliplicateur_1
-multi_1.addEventListener('click',()=>{
+multi_1.addEventListener('click',earth);
+
+function earth ()
+{
     if(total>=15*counter_price_1){
-    total-=15*counter_price_1;
-    counter_price_1++;
-    counter_1++;
-    pointsPerClick = pointsPerClick+2;
-    multi_1 = true;
-    display.innerHTML = total;
-    stock_terre--;
-    display_stock_terre.innerHTML = `Stock x${stock_terre}`
-    display_price_terre.innerHTML = `${counter_price_1*15}`
-}})
+        total-=15*counter_price_1;
+        counter_price_1++;
+        counter_1++;
+        pointsPerClick = pointsPerClick+2;
+        multi_1 = true;
+        display.innerHTML = total;
+        stock_terre--;
+        display_stock_terre.innerHTML = `Stock x${stock_terre}`
+        display_price_terre.innerHTML = `${counter_price_1*15}`
+}}
+
+
+
 
 // function mutliplicateur_2
 multi_2.addEventListener('click',()=>{
@@ -122,12 +128,6 @@ multi_2.addEventListener('click',()=>{
     stock_lune--;
     display_stock_lune.innerHTML = `Stock x${stock_lune}`
     display_price_lune.innerHTML = `${counter_price_2*100}`
-    // if (stock_lune==2){
-    //     multi_2.setAttribute('desabled', '')            
-    //     multi_2.style.backgroundColor = 'red';
-    //     multi_2.style.color='white' ;
-    //     multi_2.innerHTML = 'you can not use'
-    // }
 }})
 
 // function mutliplicateur_3
@@ -165,6 +165,9 @@ var idBonus5 = document.getElementById('idBonus5')
 var secoundCount = document.querySelector('.secound-count')
 
 idBonus5.addEventListener('click', ()=> {
+    pointsPerClick = pointsPerClick *2;
+    if (pointsPerClick==0)
+    { pointsPerClick = 2;}
     container.classList.remove('desabled')
     timerBonus.classList.remove('desabled')
     
@@ -178,29 +181,16 @@ idBonus5.addEventListener('click', ()=> {
             counter = 0;
             clearInterval(inst); 
         }
-    pointsPerClick = pointsPerClick * 2;
+    
 
     }
         var desableContainerTimer = setInterval(desable, 30000)
         function desable(){
             container.classList.add('desabled')
+            pointsPerClick = pointsPerClick/2;
         }
         // clearInterval(desableContainerTimer)
 })
 
 
 
-
-
-// bonus button
-// setInterval (bonus, 30000);
-// function bonus() {
-//     setInterval (function(){
-//     pointsPerClick = pointsPerClick*2;
-//     total += pointsPerClick;
-//     display.innerHTML = total;
-//     },1000)
-// }
-
-
-// test display when unlocked
