@@ -8,7 +8,6 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
-    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
     font-family: 'Kdam Thmor Pro', sans-serif;
     letter-spacing: 2px;
     margin: 1%;
@@ -33,14 +32,15 @@ body{
     font-size:3em;
     color: #fff;
     mix-blend-mode: multiply;
-
+    padding-left: 1%;
 }
+
 .mainContainer{
     display: grid;
     grid-template-columns: 3fr 1fr;
 }
 
-/* Bonus */
+/* Bonus container */
 .score{
     grid-column: 2;
     color: #ffbe01;
@@ -51,49 +51,36 @@ body{
 li{
     display: flex;
     list-style-type: none;
-    /* margin-top: 2%; */
     margin-right: 10%;
     margin-bottom: 10%;
     
 }
 .bonus1, .bonus2, .bonus3, .bonus4, .bonus5{
     justify-content: flex-end;
-    /* padding: 5%; */
     padding: 3%;
-    font-family: 'Kdam Thmor Pro', sans-serif;
-    
+    font-family: 'Kdam Thmor Pro', sans-serif;  
 }
 
+.nombreBonus1, .nombreBonus2, .nombreBonus3, .nombreBonus4, .nombreBonus5 {
+    margin-top: 6%;
+}
 
-/* Main Button and Counter */
-/* .mainCounter{
-.bonus2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-row: 2;
-
-} */
+/* Main click container */
 .mainBtn{
     background: none;
-    /* background-color: #fff; */
     background-color: transparent;
     border: none;
     display: flex;
     justify-content: center;
-    /* align-items: center; */
-    /* grid-row: 2; */
     margin: auto;
-    
 }
 
 .mainCounter {
-    /* display: flex; */
     justify-content: center;
     padding: 1%;
     margin: 5%;
-    
 }
+
 .mainCounter img{
     transform: translateY(0px);
     animation: float 6s ease-in-out infinite;
@@ -117,20 +104,21 @@ li{
         transform: rotate(359deg);
     }
 }
+
 .score img{
     transform: rotate(0deg);
     animation: rotate 10s ease-in infinite;
 }
+
 .mainBtn img{
-    /* width: 30%; */
     height: auto; 
     cursor: pointer;
     margin: 10%;
 }
+
 .counter{
     display: flex;
     border: 2px dotted;
-    /* width: 20%; */
     width: 50%;
     height: 20%;
     justify-content: center;
@@ -138,23 +126,18 @@ li{
     font-size:xx-large;
     margin: auto;
     margin-bottom: 5%;
-    
 }
+
 .mainCounter p{
     font-size: 3em;
 }
+
 .mainContainer > .counter{
     justify-self: center;
     align-self: center;
 }
-/* .bonus5{
-    display: flex;
-    justify-content: flex-end;
-    padding: 5%;
-} */
 
 .button1, .button2, .button3, .button4, .button5 {
-    /* padding-top: 2%; */
     padding-right: 5%;
     border: none;
     background-color: transparent;
@@ -163,12 +146,10 @@ li{
     letter-spacing: 1px;
     text-align: right;
     opacity: 0.9;
-     
 }
 
 .button {
     cursor: pointer;
-    /* transition-duration: 0.4s; */
 }
 
 .imageEarth, .imageMoon, .imageVenus, .imageNeptune, .imageSun {
@@ -185,9 +166,7 @@ li{
 }
 
 /* Younes */
-
 /*  Desactiver les button */
-
 .ouvert{
     background-color: green;
     color: aliceblue;
@@ -204,7 +183,6 @@ li{
     color: white;
 }
 
-
 /* Processus de bonus */
 .container-timer{
     width: 50px;
@@ -214,6 +192,7 @@ li{
     border: solid 1px gray;
     transform: rotate(180deg);
 }
+
 .desabled{
     display: none;
 }
@@ -245,37 +224,27 @@ li{
         background-color: #980f0a;
     }
 }
+
 /* secound count bonus */
 .secound-count{
     position: absolute;
     transform: rotate(180deg);
 }
-/* image rotation on hover */
-/* .imageEarth:hover, .imageMoon:hover, .imageVenus:hover, .imageNeptune:hover, .imageSun:hover {
-    transform: rotate(360deg);
-} */
 
-/* display instruction on hover */
-/* .hide {
-    display:none;
-}
-.button1:hover + .hide {
-    display:block;
-    color:#ffbe01;
-} */
-
+/* bonus display instructions on hover */
 .hide {
     display:none;
-    margin: 22% 15% 5% 5%;
+    margin: 22% 18% 5% 5%;
     z-index: 2;
-    /* padding: 5px; */
 }
+
 .elementHide:hover + .hide {
     display: inline-block;
     position: absolute;
     color:#ffbe01;
     font-size: 0.7em;
 }
+
 .elementHide {
     margin-right: 20%;
     text-align: left;
