@@ -205,4 +205,13 @@ idBonus5.addEventListener('click', ()=> {
 })
 
 
+// test gray image until unlocked
+multi_1.addEventListener('click',()=> {
+    function FunctionGrayEarth() {
+    if(total<=14*counter_price_1) {
+        const list = document.getElementById("idEarth");
+    }
+    list.add("disabled-img");
+}})
+
 

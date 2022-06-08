@@ -30,7 +30,7 @@
         <p class="secondsContainer"><span class="perSeconds">per Seconds: </span><span class="perSeconds" id="perSeconds">0</span></p>
         <!-- Main Button -->
         <button class="mainBtn" id="idMainBtn">
-            <img src="./assets/astronaute.png"></button>
+            <img class="mainImage" src="./assets/astronaute.png"></button>
         </div>
         <div class="container-timer desabled">
             <div class="reverse-timer desabled">
@@ -45,10 +45,10 @@
                     <p class="elementHide">Earth</p>
                     <p class="hide">Each Earth doubles the energy.</p>
                     <button class="button button1" id="idButton1">
-                        <img class="imageEarth" src="./assets/icons/planet-earth-64.png"><span id="price1">015</span> 
+                        <img class="imageEarth" id="idEarth" src="./assets/icons/planet-earth-64.png"><span id="price1">015</span> 
                         <p class="multiplier1" id="idMultiplier1">x2</p>
                         <p class="nombreBonus1" id="idNombreBonus1">Stock x3</p>
-                    </button>         
+                    </button> 
                 </li>
                 <li class="bonus2" id="idBonus2">
                     <p class="elementHide">Moon</p>
@@ -85,12 +85,10 @@
                 </li>
             </ul>
         </div>
-
     </main>
     <footer>
         <i class="fa-regular fa-copyright"></i>
     </footer>
-
     <!-- link script js -->
     <script src="index.js"></script>
 </body>
