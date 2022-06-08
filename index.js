@@ -2,6 +2,12 @@ const display = document.getElementById('idCounter')
 var plus1Btn = document.getElementById('idMainBtn')
 var multi_1 = document.getElementById('idButton1')
 var multi_2 = document.getElementById('idButton2')
+var multi_3 = document.getElementById('idButton3')
+var display_stock_terre = document.getElementById('idNombreBonus1')
+var display_stock_lune = document.getElementById('idNombreBonus2')
+var stock_terre = 3;
+var stock_lune = 3;
+var stock_mars = 3;
 
 var total = 0;
 
@@ -9,10 +15,12 @@ plus1Btn.addEventListener('click', oneHandler)
 
 let counter_1 = 0;
 let counter_2 = 0;
+let counter_3 = 0;
 let counter_price_1 = 1;
 let counter_price_2 = 1;
+let counter_price_3 = 1;
 
-var pointsPerClick = 0;
+var pointsPerClick = 1;
 
 
 
@@ -57,7 +65,7 @@ else if (multi_2 == true)
 }
 else
 {
-    total += 1;
+    total += pointsPerClick;
     display.innerHTML = total;
 }}
     
@@ -70,9 +78,11 @@ multi_1.addEventListener('click',()=>{
     total-=15*counter_price_1;
     counter_price_1++;
     counter_1++;
-    pointsPerClick = pointsPerClick+2;
+    pointsPerClick = pointsPerClick+1;
     multi_1 = true;
     display.innerHTML = total;
+    stock_terre--;
+    display_stock_terre.innerHTML = `Stock x${stock_terre}`
 }})
 
 // function mutliplicateur_2
@@ -81,15 +91,30 @@ multi_2.addEventListener('click',()=>{
     total-=100*counter_price_2;
     counter_price_2++;
     counter_2++;
-    pointsPerClick = pointsPerClick+5;
+    pointsPerClick = pointsPerClick+4;
     multi_2 = true;
     display.innerHTML = total;
-    if (counter_2==5){
-        multi_stop.setAttribute('desabled', '')            
-        multi_stop.style.backgroundColor = 'red';
-        multi_stop.style.color='white' ;
-        multi_stop.innerHTML = 'you can not use'
+    stock_lune--;
+    display_stock_lune.innerHTML = `Stock x${stock_lune}`
+    if (stock_lune==2){
+        multi_2.setAttribute('desabled', '')            
+        multi_2.style.backgroundColor = 'red';
+        multi_2.style.color='white' ;
+        multi_2.innerHTML = 'you can not use'
     }
+}})
+
+// function mutliplicateur_3
+multi_1.addEventListener('click',()=>{
+    if(total>=300*counter_price_3){
+    total-=300*counter_price_3;
+    counter_price_3++;
+    counter_3++;
+    pointsPerClick = pointsPerClick+9;
+    multi_3 = true;
+    display.innerHTML = total;
+    stock_mars--;
+    display_stock_mars.innerHTML = `Stock x${stock_mars}`
 }})
 
 // auto Click
@@ -98,7 +123,7 @@ idButton4.addEventListener('click' ,()=> {
     if(total >= 500){
         total -= 500;
         var time = setInterval(function () {
-            total +=  1;
+            total +=  pointsPerClick;
             display.innerHTML = total
         }, 1000);
     }
@@ -125,6 +150,7 @@ idBonus5.addEventListener('click', ()=> {
             counter = 0;
             clearInterval(inst); 
         }
+    pointsPerClick = pointsPerClick * 2;
 
     }
         var desableContainerTimer = setInterval(desable, 30000)

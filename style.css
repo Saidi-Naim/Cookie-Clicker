@@ -11,6 +11,7 @@ body{
     font-family: 'Kdam Thmor Pro', sans-serif;
     letter-spacing: 2px;
     margin: 1%;
+    user-select: none;
 }
 .titleContainer{
     width: 80%;
@@ -37,12 +38,12 @@ body{
 
 .mainContainer{
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 1fr 3fr 1fr;
 }
 
 /* Bonus container */
 .score{
-    grid-column: 2;
+    grid-column: 3;
     color: #ffbe01;
     margin: 1%;
     position:relative;  
@@ -60,7 +61,9 @@ li{
     padding: 3%;
     font-family: 'Kdam Thmor Pro', sans-serif;  
 }
-
+.score > .scoreLeft > li{
+    grid-column: 1;
+}
 .nombreBonus1, .nombreBonus2, .nombreBonus3, .nombreBonus4, .nombreBonus5 {
     margin-top: 6%;
 }
@@ -73,12 +76,14 @@ li{
     display: flex;
     justify-content: center;
     margin: auto;
+    grid-column: 2;
 }
 
 .mainCounter {
     justify-content: center;
     padding: 1%;
     margin: 5%;
+    grid-column: 2;
 }
 
 .mainCounter img{
@@ -90,7 +95,7 @@ li{
         transform: translateY(0px);
     }
     50%{
-        transform: translateY(-10px);
+        transform: translateY(-30px);
     }
     100%{
         transform: translateY(0px);
@@ -118,7 +123,6 @@ li{
 
 .counter{
     display: flex;
-    border: 2px dotted;
     width: 50%;
     height: 20%;
     justify-content: center;
@@ -255,17 +259,17 @@ li{
 }
 
 .bonus1:hover {
-    color:royalblue;
+    color:#4169e1;
 }
 .bonus2:hover {
-    color:rgb(150, 148, 148);
+    color:#969494;
 }
 .bonus3:hover {
-    color:crimson;
+    color:#db143c;
 }
 .bonus4:hover {
-    color:rgb(116, 159, 238);
+    color:#749fee;
 }
 .bonus5:hover {
-    color:orangered;
+    color:#ff4400;
 }
