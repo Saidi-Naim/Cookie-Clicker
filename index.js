@@ -34,6 +34,7 @@ function oneHandler(){
 
 // check if multi available
 let bonus1 = document.querySelector('.bonus1')
+let imageEarth = document.querySelector('.imageEarth')
 if (counter_1==3)
 {
     let span1 = document.createElement('span');
@@ -41,7 +42,7 @@ if (counter_1==3)
     span1.appendChild(text1)
     bonus1.appendChild(span1)
     span1.style.backgroundColor = 'red'
-    span1.style.padding= "2px 7px"
+    span1.style.padding= "2px 7px" ;
 }
 
 let bonus2 = document.querySelector('.bonus2')
@@ -65,16 +66,7 @@ if (counter_3==3)
     span3.style.backgroundColor = 'red'
     span3.style.padding= "2px 7px"
 }
-let bonus4 = document.querySelector('.bonus4')
-if (counter_4==3)
-{
-    let span4 = document.createElement('span');
-    let text4 = document.createTextNode('you cant click');
-    span4.appendChild(text4)
-    bonus4.appendChild(span4)
-    span4.style.backgroundColor = 'red'
-    span4.style.padding= "2px 7px"
-}
+
 // get points
 if (multi_1 == true && multi_2 == true && multi_3 == true)
 {
