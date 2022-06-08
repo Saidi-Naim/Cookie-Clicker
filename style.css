@@ -53,6 +53,7 @@ body{
 .scoreLeft {
     grid-column: 1;
     grid-row: 1;
+
     color:#ffbe01;
     margin: 1%;
     position: relative;
@@ -320,20 +321,29 @@ body{
 .bonus1 span{
     position: absolute;
     float: left;
+    margin-left: 5px;
 } 
 .bonus2 span{
     position: absolute;
     float: left;
+    margin-left: 5px;
 }
 .bonus3 span{
     position: absolute;
     float: left;
+    margin-left: 5px;
 }
 .bonus4 span{
     position: absolute;
     float: left;
+    margin-left: 5px;
 }
 .bonus5 span{
     position: absolute;
     float: left;
+    margin-left: 5px;
+}
+
+.disabled-img{
+    filter: grayscale();
 }
