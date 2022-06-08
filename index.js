@@ -201,3 +201,6 @@ idBonus5.addEventListener('click', ()=> {
 //     display.innerHTML = total;
 //     },1000)
 // }
+
+
+// test display when unlocked

@@ -12,6 +12,7 @@ body{
     letter-spacing: 2px;
     margin: 1%;
     user-select: none;
+    overflow: hidden;
 }
 .titleContainer{
     width: 80%;
@@ -48,26 +49,45 @@ body{
     margin: 1%;
     position: relative;  
 }
+
 .scoreLeft {
     grid-column: 1;
     grid-row: 1;
+<<<<<<< HEAD
+=======
+    color:#ffbe01;
+    margin: 1%;
+    position: relative;
 }
+.scoreLeft li {
+    display: flex;
+    margin-left: 10%;
+    margin-bottom: 15;
+>>>>>>> da15bf279ac1e3010a3fdbee417cb4f569f831dc
+}
+
 .score li{
     display: flex;
     list-style-type: none;
     margin-right: 10%;
-    margin-bottom: 10%;  
+    margin-bottom: 15%;  
 }
 
 
 .bonus1, .bonus2, .bonus3, .bonus4, .bonus5{
     justify-content: flex-end;
     padding: 3%;
-    font-family: 'Kdam Thmor Pro', sans-serif;  
+    /* font-family: 'Kdam Thmor Pro', sans-serif;   */
 }
+.bonus4, .bonus5{
+    justify-content: flex-start;
+    padding: 5%;
+}
+
 .nombreBonus1, .nombreBonus2, .nombreBonus3, .nombreBonus4, .nombreBonus5 {
     margin-top: 6%;
 }
+
 
 /* Main click container */
 .mainBtn{
@@ -142,8 +162,18 @@ body{
     align-self: center;
 }
 
-.button1, .button2, .button3, .button4, .button5 {
+.button1, .button2, .button3{
     padding-right: 5%;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    letter-spacing: 1px;
+    text-align: right;
+    opacity: 0.9;
+}
+.button4, .button5 {
+    padding-left: 5%;
     border: none;
     background-color: transparent;
     color: white;
@@ -252,7 +282,8 @@ body{
 
 .elementHide {
     margin-right: 20%;
-    text-align: left;
+
+
 }
 
 .multiplier5, .multiplier4, .multiplier3, .multiplier2, .multiplier1 {
