@@ -49,7 +49,6 @@ body{
     margin: 1%;
     position: relative;  
 }
-
 .scoreLeft {
     grid-column: 1;
     grid-row: 1;
@@ -69,8 +68,6 @@ body{
     margin-right: 10%;
     margin-bottom: 15%;  
 }
-
-
 .bonus1, .bonus2, .bonus3, .bonus4, .bonus5{
     justify-content: flex-end;
     padding: 3%;
@@ -149,7 +146,12 @@ body{
     margin: auto;
     margin-bottom: 5%;
 }
-
+.perSeconds{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+}
 .mainCounter p{
     font-size: 3em;
 }
