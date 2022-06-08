@@ -10,6 +10,9 @@ var display_stock_mars = document.getElementById('idNombreBonus3')
 var display_price_terre = document.getElementById('price1')
 var display_price_lune = document.getElementById('price2')
 var display_price_mars = document.getElementById('price3')
+
+var perSeconds = document.getElementById('perSeconds')
+
 var stock_terre = 3;
 var stock_lune = 3;
 var stock_mars = 3;
@@ -80,30 +83,35 @@ if (multi_1 == true && multi_2 == true && multi_3 == true)
     total = counter_1*2 + counter_2*5 + counter_3*10 + total; 
     console.log (pointsPerClick);
     display.innerHTML = total;
+    perSeconds.innerHTML = pointsPerClick;
 }
 else if (multi_1 == true && multi_2 == true)
 {
     total = counter_1*2 + counter_2*5 + total; 
     console.log (pointsPerClick);
     display.innerHTML = total;
+    perSeconds.innerHTML = pointsPerClick;
 }
 else if (multi_1 == true)
 {
     total = counter_1*2 +total; 
     console.log (pointsPerClick);
     display.innerHTML = total;
+    perSeconds.innerHTML = pointsPerClick;
 }   
 else if (multi_2 == true)   
 {
     total = counter_2*5+total; 
     console.log (pointsPerClick);
     display.innerHTML = total;
+    perSeconds.innerHTML = pointsPerClick;
 }
 else if (multi_3 == true)   
 {
     total = counter_3*10+total; 
     console.log (pointsPerClick);
     display.innerHTML = total;
+    perSeconds.innerHTML = pointsPerClick;
 }
 else
 {
@@ -136,6 +144,7 @@ function earth ()
         pointsPerClick = pointsPerClick+2;
         multi_1 = true;
         display.innerHTML = total;
+        perSeconds.innerHTML = pointsPerClick;
         stock_terre--;
         display_stock_terre.innerHTML = `Stock x${stock_terre}`
         display_price_terre.innerHTML = `${counter_price_1*15}`
@@ -153,6 +162,7 @@ multi_2.addEventListener('click',()=>{
     pointsPerClick = pointsPerClick+5;
     multi_2 = true;
     display.innerHTML = total;
+    perSeconds.innerHTML = pointsPerClick;
     stock_lune--;
     display_stock_lune.innerHTML = `Stock x${stock_lune}`
     display_price_lune.innerHTML = `${counter_price_2*100}`
@@ -167,6 +177,7 @@ multi_3.addEventListener('click',()=>{
     pointsPerClick = pointsPerClick+10;
     multi_3 = true;
     display.innerHTML = total;
+    perSeconds.innerHTML = pointsPerClick;
     stock_mars--;
     display_stock_mars.innerHTML = `Stock x${stock_mars}`
     display_price_mars.innerHTML = `${counter_price_3*300}`
@@ -222,9 +233,19 @@ idBonus5.addEventListener('click', ()=> {
         function desable(){
             container.classList.add('desabled')
             pointsPerClick = pointsPerClick/2;
+            perSeconds.innerHTML = pointsPerClick;
         }
         // clearInterval(desableContainerTimer)
 })
 
+
+// // test gray image until unlocked
+// multi_1.addEventListener('click',()=> {
+//     function FunctionGrayEarth() {
+//     if(total<=14*counter_price_1) {
+//         const list = document.getElementById("idEarth");
+//     }
+//     list.add("disabled-img");
+// }})
 
 
