@@ -1,14 +1,17 @@
 # Cookie-Clicker
-### Team Challenge: 
+### Team collaborators: 
 - Guillaume Breyer      
 - Sophie Cheng    
 - Naïm Saidi     
 - Younes Sheikhlar    
    
 ### Link:  https://saidi-naim.github.io/Cookie-Clicker/
+### Where: BeCode Brussels
+### When: 10 June 2022
+### Technologies used: HTML/CSS/JS 
    
 ### The mission:     
- The challenge is to create a Cookie Clicker as a team.     
+ The challenge is to create a Cookie Clicker (game) as a team. We made a variant of the game, Space-themed. 
 
 ### Must-have features:     
 ##### Step 1: base structure     
@@ -53,5 +56,8 @@ Your cookie clicker must be pretty, make it look good with CSS or some extra Jav
 ##### Image credit:
 Background  image of galaxy by Francesco Ungaro on Pexels.   
 Images from FlatIcons.      
+
+### Image of the game:
+![Space-Clicker game example](./assets/space.png "Space-Clicker game example")
 
 #### Thank you for reading. 
