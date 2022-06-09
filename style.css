@@ -115,6 +115,7 @@ body{
     grid-column: 3;
     color: #ffbe01;
     margin: 1%;
+    margin-right:10%;
     position: relative;  
 }
 .scoreLeft {
@@ -409,6 +410,9 @@ body{
         flex-direction: row;
         justify-content: center;
     }
+    .score{
+        margin-right:0;
+    }
     .score li{
         margin-left: 3%;
         margin-bottom: 3%;
@@ -468,7 +472,7 @@ body{
         position: absolute;
         /* float: right;  */
         font-size: xx-small;
-    } 
+    }
 }
 
 @media screen and (max-width: 300px) {
