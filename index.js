@@ -230,27 +230,15 @@ idButton4.addEventListener('click' ,()=> {
         
     }
 })
-// const btnBon5 = document.querySelector('#idBonus5');
-// const visiblee = document.querySelector('.progress-bar');
-// const btn5 = document.querySelector('#idButton5');
-
-// btnBon5.addEventListener('click', () => {
-//     if(visiblee.style.display === 'none'){
-//         visiblee.style.display = 'block';
-//         document.btn5.disabled = true;
-//     }else{
-//         visiblee.style.display = 'none';
-//     }
-// })
 
 // Bonus 30 
 var container = document.querySelector('.container-timer')
-var timerBonus = document.querySelector('.reverse-timer');
+var timerBonus = document.querySelector('.reverse-timer')
 var idBonus5 = document.getElementById('idBonus5')
 var secoundCount = document.querySelector('.secound-count')
 idBonus5.addEventListener('click', ()=> {
-    if(total >= 999){
-        total -= 999;
+    if(total >= 5){
+        total -= 5;
 
     pointsPerClick = pointsPerClick *2;
     counter_1*2;
