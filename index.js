@@ -237,8 +237,8 @@ var timerBonus = document.querySelector('.reverse-timer')
 var idBonus5 = document.getElementById('idBonus5')
 var secoundCount = document.querySelector('.secound-count')
 idBonus5.addEventListener('click', ()=> {
-    if(total >= 999){
-        total -= 999;
+    if(total >= 5){
+        total -= 5;
 
     pointsPerClick = pointsPerClick *2;
     counter_1*2;

@@ -168,6 +168,7 @@ body{
 }
 .mainCounter img{
     transform: translateY(0px);
+    transform: translateX(0px);
     animation: float 6s ease-in-out infinite;
 }
 /* main button animation */
@@ -275,13 +276,9 @@ body{
     width: 50px;
     height: 350px;
     position: absolute;
-    stroke-dasharray: 410;
-    stroke-dashoffset: 410;
-    transform: rotate(-90deg);
-    animation: bar-fill 30s linear forwards;
-    z-index: -3;
-    margin-top: -36%;
-    margin-left: -37.5%;
+    margin-top: 100px;
+    border: solid 1px gray;
+    transform: rotate(180deg);
 }
 .show{
     width: 120px;
@@ -289,15 +286,15 @@ body{
 }
 .hidden1{
     position: absolute;
-    z-index: 5;
+    z-index: 2000;
 }
 .hidden2{
     position: absolute;
-    z-index: 5;
+    z-index: 2000;
 }
 .hidden3{
     position: absolute;
-    z-index: 5;
+    z-index: 2000;
 }
 .desabled{
     display: none;
