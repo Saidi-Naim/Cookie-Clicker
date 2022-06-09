@@ -284,19 +284,27 @@ idBonus5.addEventListener('click', ()=> {
 
 
 // Loading 
-const loader = document.querySelector('.loading')
-window.addEventListener('load', () => {
-    loader.classList.add('fonduOut');
-})
+
+document.onreadystatechange = function() 
+  {
+    if (document.readyState != "complete") 
+    {
+      document.querySelector("body").style.visibility = "hidden";
+      document.querySelector(".loading").style.visibility = "visible";
+    } 
+    else 
+    {
+      document.querySelector(".loading").style.display = "none";
+      document.querySelector("body").style.visibility = "visible";
+    }
+  };
 
 
-// // test gray image until unlocked
-// multi_1.addEventListener('click',()=> {
-//     function FunctionGrayEarth() {
-//     if(total<=14*counter_price_1) {
-//         const list = document.getElementById("idEarth");
-//     }
-//     list.add("disabled-img");
-// }})
+
+// test alert box with instructions
+
+    document.getElementById("buttonPlay").addEventListener("click", () => {
+        alert("Hi new astronaut! Collect the stars in the galaxy, you can get the help of the planets around you to collect faster, but if you do not have enough stars, they will not help.");
+    })
 
 
