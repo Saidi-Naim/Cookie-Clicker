@@ -28,7 +28,6 @@ let counter_price_3 = 1;
 var pointsPerClick = 0;
 
 
-
 // function on main button
 function oneHandler(){
 
@@ -176,16 +175,27 @@ idButton4.addEventListener('click' ,()=> {
             display.innerHTML = total
         }, 1000);
     }
-    
 })
+// const btnBon5 = document.querySelector('#idBonus5');
+// const visiblee = document.querySelector('.progress-bar');
+// const btn5 = document.querySelector('#idButton5');
+
+// btnBon5.addEventListener('click', () => {
+//     if(visiblee.style.display === 'none'){
+//         visiblee.style.display = 'block';
+//         document.btn5.disabled = true;
+//     }else{
+//         visiblee.style.display = 'none';
+//     }
+// })
 
 // Bonus 30 
 var container = document.querySelector('.container-timer')
 var timerBonus = document.querySelector('.reverse-timer');
 var idBonus5 = document.getElementById('idBonus5')
 var secoundCount = document.querySelector('.secound-count')
-
 idBonus5.addEventListener('click', ()=> {
+
     pointsPerClick = pointsPerClick *2;
     counter_1*2;
     counter_2*2;
@@ -194,7 +204,7 @@ idBonus5.addEventListener('click', ()=> {
     { pointsPerClick = 2;}
     container.classList.remove('desabled')
     timerBonus.classList.remove('desabled')
-    
+
     var text = ['29 s', '28 s' , '27 s' , '26 s' , '25 s' , '24 s', '23 s', '22 s','21 s','20 s','19 s','18 s', '17 s' , '16 s' ,'15 s','14 s','13 s', '12 s', '11 s' , '10 s' , '9 s','8 s','7 s','6 s', '5 s', '4 s', '3 s', '2 s', '1 s',''];
     var counter = 0;
     var inst = setInterval(change, 1000);
@@ -202,11 +212,9 @@ idBonus5.addEventListener('click', ()=> {
         secoundCount.innerHTML = text[counter];
         counter++;
         if (counter >= text.length) { 
-            counter = 0;
+            // counter = 0;
             clearInterval(inst); 
-        }
-    
-
+        
     }
         var desableContainerTimer = setInterval(desable, 30000)
         function desable(){
@@ -214,6 +222,12 @@ idBonus5.addEventListener('click', ()=> {
             pointsPerClick = pointsPerClick/2;
         }
         // clearInterval(desableContainerTimer)
+   }
+});
+// Loading 
+const loader = document.querySelector('.loading')
+window.addEventListener('load', () => {
+    loader.classList.add('fonduOut');
 })
 
 
