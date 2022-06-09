@@ -6,9 +6,9 @@
 - Younes Sheikhlar    
    
 ### Link:  https://saidi-naim.github.io/Cookie-Clicker/
-### Where: BeCode Brussels
-### When: 10 June 2022
-### Technologies used: HTML/CSS/JS 
+#### Where: BeCode Brussels
+#### When: 10 June 2022
+#### Technologies used: HTML/CSS/JS 
    
 ### The mission:     
  The challenge is to create a Cookie Clicker (game) as a team. We made a variant of the game, Space-themed. 
