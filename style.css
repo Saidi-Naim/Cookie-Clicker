@@ -1,4 +1,4 @@
-::before ::after{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -71,7 +71,7 @@ body{
     overflow: hidden;
 }
 .titleContainer{
-    width: 80%;
+    width: 50%;
     height: auto;
     position: relative;
 }
@@ -114,7 +114,7 @@ body{
     display: flex;
     list-style-type: none;
     margin-left: 10%;
-    margin-bottom: 40%;
+    margin-bottom: 36%;
 }
 .score li{
     display: flex;
@@ -489,7 +489,7 @@ body{
 
 /* alert button */
 .buttonMain {
-    text-align: left;
+    text-align: center;
 }
 #buttonPlay{
     color:#ffffff;
@@ -498,4 +498,9 @@ body{
     background-color: transparent;
     border: none;
     cursor: pointer;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    letter-spacing: 2px;
+}
+#buttonPlay:hover{
+    color:#ffbe01;
 }
