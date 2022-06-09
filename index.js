@@ -282,7 +282,6 @@ idBonus5.addEventListener('click', ()=> {
 }
 
 });
-// }});
 
 
 
