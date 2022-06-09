@@ -11,7 +11,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000000;
+    /* z-index: 1000000; */
 }
 .letter{
     color: #484848;
@@ -114,11 +114,7 @@ body{
     display: flex;
     list-style-type: none;
     margin-left: 10%;
-<<<<<<< HEAD
-    margin-bottom: 15;
-=======
     margin-bottom: 27%;
->>>>>>> 5476eb7ae07be314626662cb7c6bbd44b30c323b
 }
 .score li{
     display: flex;
