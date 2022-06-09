@@ -493,3 +493,16 @@ body{
 #buttonPlay:hover{
     color:#ffbe01;
 }
+
+/* notification planet */
+.bonus1 span{
+    padding: 2px 7px;
+}
+.bonus2 span{
+    padding: 2px 7px;
+
+}
+.bonus3 span{
+    padding: 2px 7px;
+
+}
