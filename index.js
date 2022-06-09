@@ -275,11 +275,13 @@ idBonus5.addEventListener('click', ()=> {
         var desableContainerTimer = setInterval(desable, 30000)
         function desable(){
             container.classList.add('desabled')
-            pointsPerClick = pointsPerClick/2;
+            
             perSeconds.innerHTML = pointsPerClick;
         }
         // clearInterval(desableContainerTimer)
-   }}
+   }
+   pointsPerClick = pointsPerClick/2;
+}
    else {
         display_price_sun.innerHTML = `the planet cost 999 stars. Collect more stars and come back!`
         setInterval(noMoney, 3000)
