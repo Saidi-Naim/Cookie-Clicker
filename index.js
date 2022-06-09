@@ -265,7 +265,7 @@ idBonus5.addEventListener('click', ()=> {
         // clearInterval(desableContainerTimer)
    }
 });
-// Loading 
+// Loading page
 
 document.onreadystatechange = function() 
   {
