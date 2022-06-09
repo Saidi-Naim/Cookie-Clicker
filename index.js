@@ -1,4 +1,6 @@
 const display = document.getElementById('idCounter')
+const neptune = document.getElementById('neptune')
+const sun = document.getElementById('sun')
 var plus1Btn = document.getElementById('idMainBtn')
 var multi_1 = document.getElementById('idButton1')
 var multi_2 = document.getElementById('idButton2')
@@ -163,6 +165,7 @@ function earth ()
         display_price_terre.innerHTML = `${counter_price_1*15}`}
         else 
         {
+
             display_price_terre.innerHTML = `the planet cost ${counter_price_1*15} stars. Collect more stars and come back!`
             setInterval(noMoney, 3000)
             function noMoney () {display_price_terre.innerHTML = `${counter_price_1*15}`
@@ -227,7 +230,8 @@ idButton4.addEventListener('click' ,()=> {
         {
             display_price_neptune.innerHTML = `the planet cost 500 stars. Collect more stars and come back!`
             setInterval(noMoney, 3000)
-            function noMoney () {display_price_neptune.innerHTML = `500`
+            function noMoney () {display_price_neptune.innerHTML = `500`;
+            neptune.innerHTML =``;
         }
         
     }
@@ -272,12 +276,12 @@ idBonus5.addEventListener('click', ()=> {
    else {
         display_price_sun.innerHTML = `the planet cost 999 stars. Collect more stars and come back!`
         setInterval(noMoney, 3000)
-        function noMoney () {display_price_sun.innerHTML = `999`
+        function noMoney () {display_price_sun.innerHTML = `999`;
+        neptune.innerHTML =``;
    }
 }
 
 });
-// }});
 
 
 
