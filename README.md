@@ -57,7 +57,12 @@ Your cookie clicker must be pretty, make it look good with CSS or some extra Jav
 Background  image of galaxy by Francesco Ungaro on Pexels.   
 Images from FlatIcons.      
 
+### Loading Page:
+![Loading](./assets/img-readme/loadingPage.png "Space-Clicker Loading page")
 ### Image of the game:
-![Space-Clicker game example](./assets/space.png "Space-Clicker game example")
+![Space-Clicker game example](./assets/img-readme/space.png "Space-Clicker game example")
+
 
 #### Thank you for reading. 
+![Astro](./assets/img-readme/astroGif.gif "Astro Giffer")
+
