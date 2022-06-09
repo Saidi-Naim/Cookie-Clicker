@@ -10,6 +10,8 @@ var display_stock_mars = document.getElementById('idNombreBonus3')
 var display_price_terre = document.getElementById('price1')
 var display_price_lune = document.getElementById('price2')
 var display_price_mars = document.getElementById('price3')
+var display_price_neptune = document.getElementById('price4')
+var display_price_sun = document.getElementById('price5')
 
 var perSeconds = document.getElementById('perSeconds')
 
@@ -212,7 +214,13 @@ idButton4.addEventListener('click' ,()=> {
             total +=  pointsPerClick;
             console.log (pointsPerClick);
             display.innerHTML = total
-        }, 1000);
+        }, 1000);}
+        else 
+        {
+            display_price_neptune.innerHTML = `the planet cost 500 stars. Collect more stars and come back!`
+            setInterval(noMoney, 3000)
+            function noMoney () {display_price_neptune.innerHTML = `500`
+        }
         
     }
 })
@@ -235,6 +243,8 @@ var timerBonus = document.querySelector('.reverse-timer');
 var idBonus5 = document.getElementById('idBonus5')
 var secoundCount = document.querySelector('.secound-count')
 idBonus5.addEventListener('click', ()=> {
+    if(total >= 999){
+        total -= 999;
 
     pointsPerClick = pointsPerClick *2;
     counter_1*2;
@@ -263,8 +273,16 @@ idBonus5.addEventListener('click', ()=> {
             perSeconds.innerHTML = pointsPerClick;
         }
         // clearInterval(desableContainerTimer)
+   }}
+   else {
+        display_price_sun.innerHTML = `the planet cost 999 stars. Collect more stars and come back!`
+        setInterval(noMoney, 3000)
+        function noMoney () {display_price_sun.innerHTML = `999`
    }
-});
+}});
+
+
+
 // Loading 
 const loader = document.querySelector('.loading')
 window.addEventListener('load', () => {
