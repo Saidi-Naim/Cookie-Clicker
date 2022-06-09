@@ -31,13 +31,13 @@ let counter_price_3 = 1;
 var pointsPerClick = 0;
 
 
-
 // function on main button
 function oneHandler(){
 
 // check if multi available
 let bonus1 = document.querySelector('.bonus1')
 let imageEarth = document.querySelector('.imageEarth')
+let hidden1 = document.querySelector('.hidden1')
 if (counter_1==3)
 {
     let span1 = document.createElement('span');
@@ -46,9 +46,13 @@ if (counter_1==3)
     bonus1.appendChild(span1)
     span1.style.backgroundColor = 'red'
     span1.style.padding= "2px 7px" ;
+    imageEarth.classList.add('img-nonColor')
+    hidden1.classList.add('show')
 }
 
+let imageMoon = document.querySelector('.imageMoon')
 let bonus2 = document.querySelector('.bonus2')
+let hidden2 = document.querySelector('.hidden2')
 if (counter_2==3)
 {
     let span2 = document.createElement('span');
@@ -57,9 +61,13 @@ if (counter_2==3)
     bonus2.appendChild(span2)
     span2.style.backgroundColor = 'red'
     span2.style.padding= "2px 7px"
+    imageMoon.classList.add('img-nonColor')
+    hidden2.classList.add('show')
 }
 
+let imageVenus = document.querySelector('.imageVenus')
 let bonus3 = document.querySelector('.bonus3')
+let hidden3 = document.querySelector('.hidden3')
 if (counter_3==3)
 {
     let span3 = document.createElement('span');
@@ -68,6 +76,8 @@ if (counter_3==3)
     bonus3.appendChild(span3)
     span3.style.backgroundColor = 'red'
     span3.style.padding= "2px 7px"
+    imageVenus.classList.add('img-nonColor')
+    hidden3.classList.add('show')
 }
 
 // get points
@@ -140,11 +150,15 @@ function earth ()
         perSeconds.innerHTML = pointsPerClick;
         stock_terre--;
         display_stock_terre.innerHTML = `Stock x${stock_terre}`
-        display_price_terre.innerHTML = `${counter_price_1*15}`
-}}
-
-
-
+        display_price_terre.innerHTML = `${counter_price_1*15}`}
+        else 
+        {
+            display_price_terre.innerHTML = `the planet cost ${counter_price_1*15} stars. Collect more stars and come back!`
+            setInterval(noMoney, 3000)
+            function noMoney () {display_price_terre.innerHTML = `${counter_price_1*15}`
+        }
+}
+}
 
 // function mutliplicateur_2
 multi_2.addEventListener('click',()=>{
@@ -158,7 +172,13 @@ multi_2.addEventListener('click',()=>{
     perSeconds.innerHTML = pointsPerClick;
     stock_lune--;
     display_stock_lune.innerHTML = `Stock x${stock_lune}`
-    display_price_lune.innerHTML = `${counter_price_2*100}`
+    display_price_lune.innerHTML = `${counter_price_2*100}`}
+    else 
+        {
+            display_price_lune.innerHTML = `the planet cost ${counter_price_2*100} stars. Collect more stars and come back!`
+            setInterval(noMoney, 3000)
+            function noMoney () {display_price_lune.innerHTML = `${counter_price_2*100}`
+        }
 }})
 
 // function mutliplicateur_3
@@ -173,10 +193,17 @@ multi_3.addEventListener('click',()=>{
     perSeconds.innerHTML = pointsPerClick;
     stock_mars--;
     display_stock_mars.innerHTML = `Stock x${stock_mars}`
-    display_price_mars.innerHTML = `${counter_price_3*300}`
+    display_price_mars.innerHTML = `${counter_price_3*300}`}
+    else 
+        {
+            display_price_mars.innerHTML = `the planet cost ${counter_price_3*300} stars. Collect more stars and come back!`
+            setInterval(noMoney, 3000)
+            function noMoney () {display_price_mars.innerHTML = `${counter_price_3*300}`
+        }
 }})
 
 // auto Click
+
 var idButton4 = document.getElementById('idButton4')
 idButton4.addEventListener('click' ,()=> {
     if(total >= 500){
@@ -186,17 +213,29 @@ idButton4.addEventListener('click' ,()=> {
             console.log (pointsPerClick);
             display.innerHTML = total
         }, 1000);
+        
     }
-    
 })
+// const btnBon5 = document.querySelector('#idBonus5');
+// const visiblee = document.querySelector('.progress-bar');
+// const btn5 = document.querySelector('#idButton5');
+
+// btnBon5.addEventListener('click', () => {
+//     if(visiblee.style.display === 'none'){
+//         visiblee.style.display = 'block';
+//         document.btn5.disabled = true;
+//     }else{
+//         visiblee.style.display = 'none';
+//     }
+// })
 
 // Bonus 30 
 var container = document.querySelector('.container-timer')
 var timerBonus = document.querySelector('.reverse-timer');
 var idBonus5 = document.getElementById('idBonus5')
 var secoundCount = document.querySelector('.secound-count')
-
 idBonus5.addEventListener('click', ()=> {
+
     pointsPerClick = pointsPerClick *2;
     counter_1*2;
     counter_2*2;
@@ -205,7 +244,7 @@ idBonus5.addEventListener('click', ()=> {
     { pointsPerClick = 2;}
     container.classList.remove('desabled')
     timerBonus.classList.remove('desabled')
-    
+
     var text = ['29 s', '28 s' , '27 s' , '26 s' , '25 s' , '24 s', '23 s', '22 s','21 s','20 s','19 s','18 s', '17 s' , '16 s' ,'15 s','14 s','13 s', '12 s', '11 s' , '10 s' , '9 s','8 s','7 s','6 s', '5 s', '4 s', '3 s', '2 s', '1 s',''];
     var counter = 0;
     var inst = setInterval(change, 1000);
@@ -213,11 +252,9 @@ idBonus5.addEventListener('click', ()=> {
         secoundCount.innerHTML = text[counter];
         counter++;
         if (counter >= text.length) { 
-            counter = 0;
+            // counter = 0;
             clearInterval(inst); 
-        }
-    
-
+        
     }
         var desableContainerTimer = setInterval(desable, 30000)
         function desable(){
@@ -226,17 +263,25 @@ idBonus5.addEventListener('click', ()=> {
             perSeconds.innerHTML = pointsPerClick;
         }
         // clearInterval(desableContainerTimer)
-})
+   }
+});
+// Loading 
+
+document.onreadystatechange = function() 
+  {
+    if (document.readyState != "complete") 
+    {
+      document.querySelector("body").style.visibility = "hidden";
+      document.querySelector(".loading").style.visibility = "visible";
+    } 
+    else 
+    {
+      document.querySelector(".loading").style.display = "none";
+      document.querySelector("body").style.visibility = "visible";
+    }
+  };
 
 
-// // test gray image until unlocked
-// multi_1.addEventListener('click',()=> {
-//     function FunctionGrayEarth() {
-//     if(total<=14*counter_price_1) {
-//         const list = document.getElementById("idEarth");
-//     }
-//     list.add("disabled-img");
-// }})
 
 // test alert box with instructions
 
