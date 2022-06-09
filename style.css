@@ -58,11 +58,7 @@ body{
     display: flex;
     list-style-type: none;
     margin-left: 10%;
-<<<<<<< HEAD
     margin-bottom: 15;
-=======
-    margin-bottom: 27%;
->>>>>>> 5476eb7ae07be314626662cb7c6bbd44b30c323b
 }
 .score li{
     display: flex;
@@ -334,12 +330,8 @@ body{
     float: left;
     margin-left: 5px;
 }
-<<<<<<< HEAD
 
 .img-nonColor{
-=======
-.disabled-img{
->>>>>>> e845c0b954424c1f844c60f77725c6fd0e9322d8
     filter: grayscale();
 }
 

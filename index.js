@@ -190,9 +190,7 @@ idButton4.addEventListener('click' ,()=> {
     if(total >= 500){
         total -= 500;
         var time = setInterval(function () {
-            total +=  1;
-            total == x ;
-            x = pointsPerClick ;
+            total +=  pointsPerClick;
             console.log (pointsPerClick);
             display.innerHTML = total
         }, 1000);
