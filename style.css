@@ -183,10 +183,10 @@ body{
         transform: translateY(0px);
     }
 }
-.score img{
+/* .score img{
     transform: rotate(0deg);
     animation: rotate 10s ease-in infinite;
-}
+} */
 
 .mainBtn img{
     height: auto; 
