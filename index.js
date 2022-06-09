@@ -3,6 +3,7 @@ var plus1Btn = document.getElementById('idMainBtn')
 var multi_1 = document.getElementById('idButton1')
 var multi_2 = document.getElementById('idButton2')
 var multi_3 = document.getElementById('idButton3')
+var bouton_lottery = document.getElementById('idButton6')
 var display_stock_terre = document.getElementById('idNombreBonus1')
 
 var display_stock_lune = document.getElementById('idNombreBonus2')
@@ -35,6 +36,11 @@ var pointsPerClick = 0;
 
 // function on main button
 function oneHandler(){
+
+/// check if lottery available
+if (total>5) { 
+    lottery_field.style.visibility = "visible";}
+
 
 // check if multi available
 let bonus1 = document.querySelector('.bonus1')
@@ -308,3 +314,42 @@ document.onreadystatechange = function()
     })
 
 
+
+
+
+
+
+
+
+//// LOTTERY
+
+//var bouton_lottery = document.getElementById("button_lottery");
+var lottery_field = document.getElementById("idBonus6");
+var texte_lottery = document.getElementById("idNombreBonusLottery")
+
+
+/// MISE EN CONDITION D APPARITION A 100 POINTS
+
+bouton_lottery.addEventListener('click',lottery);
+
+
+function lottery () 
+{
+    alert ("\n                                       Lottery Game!\n\n You can win or lose between 1 and 10,000 stars with only one click.\n Are you sure ? You could Game over if your collect is negative.\n\n Click again on the planet to try your luck!");
+    bouton_lottery.removeEventListener('click',lottery);
+    if (bouton_lottery.addEventListener('click', ()=>
+    {
+        var randomNumber = (Math.random() < 0.5 ? -1 : 1)*(Math.floor(Math.random() * 10000));
+        total += randomNumber;
+        console.log (randomNumber);
+        if (total < 0)
+        {
+            alert (`Game Over, your score is : ${total}`)
+            window.location.reload();
+        }
+        display.innerHTML = total;
+       
+        
+    }))
+    console.log (randomNumber);
+}
