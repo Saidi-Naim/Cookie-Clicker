@@ -168,7 +168,6 @@ body{
 }
 .mainCounter img{
     transform: translateY(0px);
-    transform: translateX(0px);
     animation: float 6s ease-in-out infinite;
 }
 /* main button animation */
@@ -183,11 +182,6 @@ body{
         transform: translateY(0px);
     }
 }
-/* .score img{
-    transform: rotate(0deg);
-    animation: rotate 10s ease-in infinite;
-} */
-
 .mainBtn img{
     height: auto; 
     cursor: pointer;
