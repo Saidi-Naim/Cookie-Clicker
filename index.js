@@ -38,6 +38,7 @@ function oneHandler(){
 // check if multi available
 let bonus1 = document.querySelector('.bonus1')
 let imageEarth = document.querySelector('.imageEarth')
+let hidden1 = document.querySelector('.hidden1')
 if (counter_1==3)
 {
     let span1 = document.createElement('span');
@@ -47,11 +48,12 @@ if (counter_1==3)
     span1.style.backgroundColor = 'red'
     span1.style.padding= "2px 7px" ;
     imageEarth.classList.add('img-nonColor')
-    
+    hidden1.classList.add('show')
 }
 
 let imageMoon = document.querySelector('.imageMoon')
 let bonus2 = document.querySelector('.bonus2')
+let hidden2 = document.querySelector('.hidden2')
 if (counter_2==3)
 {
     let span2 = document.createElement('span');
@@ -61,11 +63,12 @@ if (counter_2==3)
     span2.style.backgroundColor = 'red'
     span2.style.padding= "2px 7px"
     imageMoon.classList.add('img-nonColor')
-
+    hidden2.classList.add('show')
 }
 
 let imageVenus = document.querySelector('.imageVenus')
 let bonus3 = document.querySelector('.bonus3')
+let hidden3 = document.querySelector('.hidden3')
 if (counter_3==3)
 {
     let span3 = document.createElement('span');
@@ -75,6 +78,7 @@ if (counter_3==3)
     span3.style.backgroundColor = 'red'
     span3.style.padding= "2px 7px"
     imageVenus.classList.add('img-nonColor')
+    hidden3.classList.add('show')
 }
 
 // get points
@@ -184,15 +188,13 @@ multi_3.addEventListener('click',()=>{
 }})
 
 // auto Click
-var x ;
+
 var idButton4 = document.getElementById('idButton4')
 idButton4.addEventListener('click' ,()=> {
     if(total >= 500){
         total -= 500;
         var time = setInterval(function () {
-            total +=  1;
-            total == x ;
-            x = pointsPerClick ;
+            total +=  pointsPerClick;
             console.log (pointsPerClick);
             display.innerHTML = total
         }, 1000);

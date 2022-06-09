@@ -203,10 +203,8 @@ body{
     background-color: green;
     color: aliceblue;
 }
-.disabled { 
-    pointer-events: none;
-    background: #d11414;
-    color: #fff;
+.img-nonColor { 
+    filter: grayscale();
 }
 .green{
     background-color: green;
@@ -222,6 +220,22 @@ body{
     margin-top: 100px;
     border: solid 1px gray;
     transform: rotate(180deg);
+}
+.show{
+    width: 120px;
+    height: 80px;
+}
+.hidden1{
+    position: absolute;
+    z-index: 5;
+}
+.hidden2{
+    position: absolute;
+    z-index: 5;
+}
+.hidden3{
+    position: absolute;
+    z-index: 5;
 }
 .desabled{
     display: none;
@@ -334,12 +348,9 @@ body{
     float: left;
     margin-left: 5px;
 }
-<<<<<<< HEAD
 
-.img-nonColor{
-=======
+
 .disabled-img{
->>>>>>> e845c0b954424c1f844c60f77725c6fd0e9322d8
     filter: grayscale();
 }
 
