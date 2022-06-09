@@ -151,11 +151,15 @@ function earth ()
         perSeconds.innerHTML = pointsPerClick;
         stock_terre--;
         display_stock_terre.innerHTML = `Stock x${stock_terre}`
-        display_price_terre.innerHTML = `${counter_price_1*15}`
-}}
-
-
-
+        display_price_terre.innerHTML = `${counter_price_1*15}`}
+        else 
+        {
+            display_price_terre.innerHTML = `the planet cost ${counter_price_1*15} stars. Collect more stars and come back!`
+            setInterval(noMoney, 3000)
+            function noMoney () {display_price_terre.innerHTML = `${counter_price_1*15}`
+        }
+}
+}
 
 // function mutliplicateur_2
 multi_2.addEventListener('click',()=>{
@@ -169,7 +173,13 @@ multi_2.addEventListener('click',()=>{
     perSeconds.innerHTML = pointsPerClick;
     stock_lune--;
     display_stock_lune.innerHTML = `Stock x${stock_lune}`
-    display_price_lune.innerHTML = `${counter_price_2*100}`
+    display_price_lune.innerHTML = `${counter_price_2*100}`}
+    else 
+        {
+            display_price_lune.innerHTML = `the planet cost ${counter_price_2*100} stars. Collect more stars and come back!`
+            setInterval(noMoney, 3000)
+            function noMoney () {display_price_lune.innerHTML = `${counter_price_2*100}`
+        }
 }})
 
 // function mutliplicateur_3
@@ -184,7 +194,13 @@ multi_3.addEventListener('click',()=>{
     perSeconds.innerHTML = pointsPerClick;
     stock_mars--;
     display_stock_mars.innerHTML = `Stock x${stock_mars}`
-    display_price_mars.innerHTML = `${counter_price_3*300}`
+    display_price_mars.innerHTML = `${counter_price_3*300}`}
+    else 
+        {
+            display_price_mars.innerHTML = `the planet cost ${counter_price_3*300} stars. Collect more stars and come back!`
+            setInterval(noMoney, 3000)
+            function noMoney () {display_price_mars.innerHTML = `${counter_price_3*300}`
+        }
 }})
 
 // auto Click
@@ -198,6 +214,7 @@ idButton4.addEventListener('click' ,()=> {
             console.log (pointsPerClick);
             display.innerHTML = total
         }, 1000);
+        
     }
     
 })
