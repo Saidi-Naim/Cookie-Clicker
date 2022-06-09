@@ -78,7 +78,7 @@ body{
     100%  {background-position: -2122px 0;}
   }
 .titleContainer{
-    width: 80%;
+    width: 50%;
     height: auto;
     position: relative;
     background-image: url(./assets/titleCompress.jpg);
@@ -128,8 +128,7 @@ body{
     display: flex;
     list-style-type: none;
     margin-left: 10%;
-    margin-bottom: 40%;
-
+    margin-bottom: 36%;
 }
 .score li{
     display: flex;
@@ -212,7 +211,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: x-small;
+    font-size: medium;
 }
 .mainCounter p{
     font-size: 3em;
@@ -446,7 +445,8 @@ body{
     }
     .score li{
         margin-left: 3%;
-        margin-bottom: 6%;
+        margin-bottom: 3%;
+        margin-right: 7%;
     }
 }
 
@@ -470,24 +470,29 @@ body{
     }
     .score li{
         margin-left: 3%;
-        margin-bottom: 6%;
+        margin-bottom: 3%;
+        margin-right: 7%;
     }
 }
 /* LOTTERY ANIMATION */
-  
 #idBonus6
 {
     visibility: hidden;
 }
+
 /* alert button */
 .buttonMain {
-    text-align: left;
+    text-align: center;
 }
 #buttonPlay{
     color:#ffffff;
-    font-size: medium;
-    padding:5px 15px 10px;
+    font-size: large;
     background-color: transparent;
     border: none;
     cursor: pointer;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    letter-spacing: 2px;
+}
+#buttonPlay:hover{
+    color:#ffbe01;
 }

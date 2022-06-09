@@ -263,11 +263,13 @@ idBonus5.addEventListener('click', ()=> {
         var desableContainerTimer = setInterval(desable, 30000)
         function desable(){
             container.classList.add('desabled')
-            pointsPerClick = pointsPerClick/2;
+            
             perSeconds.innerHTML = pointsPerClick;
         }
         // clearInterval(desableContainerTimer)
-   }}
+   }
+   pointsPerClick = pointsPerClick/2;
+}
    else {
         display_price_sun.innerHTML = `the planet cost 999 stars. Collect more stars and come back!`
         setInterval(noMoney, 3000)
@@ -296,19 +298,13 @@ document.onreadystatechange = function()
   };
 
 
-
-// test alert box with instructions
-
-    document.getElementById("buttonPlay").addEventListener("click", () => {
-        alert("Hi new astronaut! Collect the stars in the galaxy, you can get the help of the planets around you to collect faster, but if you do not have enough stars, they will not help.");
+// alert box with instructions
+    const buttonPlay = document.getElementById("buttonPlay");
+    buttonPlay.addEventListener('click', () => {
+        //alert then hide when clicked
+        alert("Hi new astronaut! \nCollect the stars in the galaxy. You can get the help of the planets around you to collect faster, but if you do not have enough stars, they will not help. \n                                          Good Luck!");
+        buttonPlay.style.display = 'none';
     })
-
-
-
-
-
-
-
 
 
 //// LOTTERY
