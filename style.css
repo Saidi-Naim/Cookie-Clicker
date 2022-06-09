@@ -428,6 +428,12 @@ body{
         padding-left:1%;
         margin: 5%;
     }
+    .bonus1 span, .bonus2 span, .bonus3 span, .bonus4 span, .bonus5 span, .bonus6 span{
+        position: absolute;
+        /* float: right; */
+        margin-left: 5px;
+        display:none;
+    }
 }
 
 @media screen and (max-width: 300px) {
@@ -453,7 +459,13 @@ body{
         margin-bottom: 3%;
         margin-right: 5%;
     }
+    .bonus1 span, .bonus2 span, .bonus3 span, .bonus4 span, .bonus5 span, .bonus6 span{
+        position: absolute;
+        /* float: right; */
+        margin-left: 5px;
+    }
 }
+
 /* LOTTERY ANIMATION */
 #idBonus6
 {
