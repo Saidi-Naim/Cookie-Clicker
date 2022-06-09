@@ -285,7 +285,9 @@ idBonus5.addEventListener('click', ()=> {
         setInterval(noMoney, 3000)
         function noMoney () {display_price_sun.innerHTML = `999`
    }
-}});
+}
+});
+// }});
 
 
 
