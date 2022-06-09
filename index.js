@@ -231,7 +231,6 @@ idButton4.addEventListener('click' ,()=> {
             display_price_neptune.innerHTML = `the planet cost 500 stars. Collect more stars and come back!`
             setInterval(noMoney, 3000)
             function noMoney () {display_price_neptune.innerHTML = `500`;
-            neptune.innerHTML =``;
         }
         
     }
@@ -277,7 +276,6 @@ idBonus5.addEventListener('click', ()=> {
         display_price_sun.innerHTML = `the planet cost 999 stars. Collect more stars and come back!`
         setInterval(noMoney, 3000)
         function noMoney () {display_price_sun.innerHTML = `999`;
-        neptune.innerHTML =``;
    }
 }
 
