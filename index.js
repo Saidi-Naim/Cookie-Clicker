@@ -3,6 +3,7 @@ var plus1Btn = document.getElementById('idMainBtn')
 var multi_1 = document.getElementById('idButton1')
 var multi_2 = document.getElementById('idButton2')
 var multi_3 = document.getElementById('idButton3')
+var bouton_lottery = document.getElementById('idButton6')
 var display_stock_terre = document.getElementById('idNombreBonus1')
 
 var display_stock_lune = document.getElementById('idNombreBonus2')
@@ -10,6 +11,8 @@ var display_stock_mars = document.getElementById('idNombreBonus3')
 var display_price_terre = document.getElementById('price1')
 var display_price_lune = document.getElementById('price2')
 var display_price_mars = document.getElementById('price3')
+var display_price_neptune = document.getElementById('price4')
+var display_price_sun = document.getElementById('price5')
 
 var perSeconds = document.getElementById('perSeconds')
 
@@ -33,6 +36,11 @@ var pointsPerClick = 0;
 
 // function on main button
 function oneHandler(){
+
+/// check if lottery available
+if (total>5) { 
+    lottery_field.style.visibility = "visible";}
+
 
 // check if multi available
 let bonus1 = document.querySelector('.bonus1')
@@ -212,7 +220,13 @@ idButton4.addEventListener('click' ,()=> {
             total +=  pointsPerClick;
             console.log (pointsPerClick);
             display.innerHTML = total
-        }, 1000);
+        }, 1000);}
+        else 
+        {
+            display_price_neptune.innerHTML = `the planet cost 500 stars. Collect more stars and come back!`
+            setInterval(noMoney, 3000)
+            function noMoney () {display_price_neptune.innerHTML = `500`
+        }
         
     }
 })
@@ -235,6 +249,8 @@ var timerBonus = document.querySelector('.reverse-timer');
 var idBonus5 = document.getElementById('idBonus5')
 var secoundCount = document.querySelector('.secound-count')
 idBonus5.addEventListener('click', ()=> {
+    if(total >= 999){
+        total -= 999;
 
     pointsPerClick = pointsPerClick *2;
     counter_1*2;
@@ -263,8 +279,18 @@ idBonus5.addEventListener('click', ()=> {
             perSeconds.innerHTML = pointsPerClick;
         }
         // clearInterval(desableContainerTimer)
+   }}
+   else {
+        display_price_sun.innerHTML = `the planet cost 999 stars. Collect more stars and come back!`
+        setInterval(noMoney, 3000)
+        function noMoney () {display_price_sun.innerHTML = `999`
    }
+}
 });
+// }});
+
+
+
 // Loading 
 
 document.onreadystatechange = function() 
@@ -290,3 +316,42 @@ document.onreadystatechange = function()
     })
 
 
+
+
+
+
+
+
+
+//// LOTTERY
+
+//var bouton_lottery = document.getElementById("button_lottery");
+var lottery_field = document.getElementById("idBonus6");
+var texte_lottery = document.getElementById("idNombreBonusLottery")
+
+
+/// MISE EN CONDITION D APPARITION A 100 POINTS
+
+bouton_lottery.addEventListener('click',lottery);
+
+
+function lottery () 
+{
+    alert ("\n                                       Lottery Game!\n\n You can win or lose between 1 and 10,000 stars with only one click.\n Are you sure ? You could Game over if your collect is negative.\n\n Click again on the planet to try your luck!");
+    bouton_lottery.removeEventListener('click',lottery);
+    if (bouton_lottery.addEventListener('click', ()=>
+    {
+        var randomNumber = (Math.random() < 0.5 ? -1 : 1)*(Math.floor(Math.random() * 10000));
+        total += randomNumber;
+        console.log (randomNumber);
+        if (total < 0)
+        {
+            alert (`Game Over, your score is : ${total}`)
+            window.location.reload();
+        }
+        display.innerHTML = total;
+       
+        
+    }))
+    console.log (randomNumber);
+}
