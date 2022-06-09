@@ -3,6 +3,7 @@ var plus1Btn = document.getElementById('idMainBtn')
 var multi_1 = document.getElementById('idButton1')
 var multi_2 = document.getElementById('idButton2')
 var multi_3 = document.getElementById('idButton3')
+var multi_5 = document.getElementById('idButton5')
 var bouton_lottery = document.getElementById('idButton6')
 var display_stock_terre = document.getElementById('idNombreBonus1')
 
@@ -30,6 +31,8 @@ let counter_3 = 0;
 let counter_price_1 = 1;
 let counter_price_2 = 1;
 let counter_price_3 = 1;
+
+multi_5 = false;
 
 var pointsPerClick = 0;
 
@@ -89,7 +92,12 @@ if (counter_3>=3)
 }
 
 // get points
-if (multi_1 == true && multi_2 == true && multi_3 == true)
+if (multi_5 == true)
+{
+    total = pointsPerClick + total;
+    display.innerHTML = total;
+}
+else if (multi_1 == true && multi_2 == true && multi_3 == true)
 {
     total = counter_1*2 + counter_2*5 + counter_3*10 + total; 
     display.innerHTML = total;
@@ -233,6 +241,7 @@ var secoundCount = document.querySelector('.secound-count')
 idBonus5.addEventListener('click', ()=> {
     if(total >= 999){
         total -= 999;
+    multi_5 = true;
     pointsPerClick = pointsPerClick *3;
     counter_1*3;
     counter_2*3;
