@@ -10,6 +10,9 @@ var display_stock_mars = document.getElementById('idNombreBonus3')
 var display_price_terre = document.getElementById('price1')
 var display_price_lune = document.getElementById('price2')
 var display_price_mars = document.getElementById('price3')
+
+var perSeconds = document.getElementById('perSeconds')
+
 var stock_terre = 3;
 var stock_lune = 3;
 var stock_mars = 3;
@@ -34,6 +37,7 @@ function oneHandler(){
 // check if multi available
 let bonus1 = document.querySelector('.bonus1')
 let imageEarth = document.querySelector('.imageEarth')
+let hidden1 = document.querySelector('.hidden1')
 if (counter_1==3)
 {
     let span1 = document.createElement('span');
@@ -42,9 +46,13 @@ if (counter_1==3)
     bonus1.appendChild(span1)
     span1.style.backgroundColor = 'red'
     span1.style.padding= "2px 7px" ;
+    imageEarth.classList.add('img-nonColor')
+    hidden1.classList.add('show')
 }
 
+let imageMoon = document.querySelector('.imageMoon')
 let bonus2 = document.querySelector('.bonus2')
+let hidden2 = document.querySelector('.hidden2')
 if (counter_2==3)
 {
     let span2 = document.createElement('span');
@@ -53,9 +61,13 @@ if (counter_2==3)
     bonus2.appendChild(span2)
     span2.style.backgroundColor = 'red'
     span2.style.padding= "2px 7px"
+    imageMoon.classList.add('img-nonColor')
+    hidden2.classList.add('show')
 }
 
+let imageVenus = document.querySelector('.imageVenus')
 let bonus3 = document.querySelector('.bonus3')
+let hidden3 = document.querySelector('.hidden3')
 if (counter_3==3)
 {
     let span3 = document.createElement('span');
@@ -64,6 +76,8 @@ if (counter_3==3)
     bonus3.appendChild(span3)
     span3.style.backgroundColor = 'red'
     span3.style.padding= "2px 7px"
+    imageVenus.classList.add('img-nonColor')
+    hidden3.classList.add('show')
 }
 
 // get points
@@ -72,30 +86,35 @@ if (multi_1 == true && multi_2 == true && multi_3 == true)
     total = counter_1*2 + counter_2*5 + counter_3*10 + total; 
     console.log (pointsPerClick);
     display.innerHTML = total;
+    perSeconds.innerHTML = pointsPerClick;
 }
 else if (multi_1 == true && multi_2 == true)
 {
     total = counter_1*2 + counter_2*5 + total; 
     console.log (pointsPerClick);
     display.innerHTML = total;
+    perSeconds.innerHTML = pointsPerClick;
 }
 else if (multi_1 == true)
 {
     total = counter_1*2 +total; 
     console.log (pointsPerClick);
     display.innerHTML = total;
+    perSeconds.innerHTML = pointsPerClick;
 }   
 else if (multi_2 == true)   
 {
     total = counter_2*5+total; 
     console.log (pointsPerClick);
     display.innerHTML = total;
+    perSeconds.innerHTML = pointsPerClick;
 }
 else if (multi_3 == true)   
 {
     total = counter_3*10+total; 
     console.log (pointsPerClick);
     display.innerHTML = total;
+    perSeconds.innerHTML = pointsPerClick;
 }
 else
 {
@@ -119,7 +138,7 @@ multi_1.addEventListener('click',earth);
  * @returns {number, innerHTML} - points par clic, mise à jour du html  
  * @returns {boolean} - multi_1 = true
  */
-function earth (pointsPerClick, total)
+function earth ()
 {
     if(total>=15*counter_price_1){
         total-=15*counter_price_1;
@@ -128,6 +147,7 @@ function earth (pointsPerClick, total)
         pointsPerClick = pointsPerClick+2;
         multi_1 = true;
         display.innerHTML = total;
+        perSeconds.innerHTML = pointsPerClick;
         stock_terre--;
         display_stock_terre.innerHTML = `Stock x${stock_terre}`
         display_price_terre.innerHTML = `${counter_price_1*15}`
@@ -145,6 +165,7 @@ multi_2.addEventListener('click',()=>{
     pointsPerClick = pointsPerClick+5;
     multi_2 = true;
     display.innerHTML = total;
+    perSeconds.innerHTML = pointsPerClick;
     stock_lune--;
     display_stock_lune.innerHTML = `Stock x${stock_lune}`
     display_price_lune.innerHTML = `${counter_price_2*100}`
@@ -159,12 +180,14 @@ multi_3.addEventListener('click',()=>{
     pointsPerClick = pointsPerClick+10;
     multi_3 = true;
     display.innerHTML = total;
+    perSeconds.innerHTML = pointsPerClick;
     stock_mars--;
     display_stock_mars.innerHTML = `Stock x${stock_mars}`
     display_price_mars.innerHTML = `${counter_price_3*300}`
 }})
 
 // auto Click
+
 var idButton4 = document.getElementById('idButton4')
 idButton4.addEventListener('click' ,()=> {
     if(total >= 500){
@@ -220,6 +243,7 @@ idBonus5.addEventListener('click', ()=> {
         function desable(){
             container.classList.add('desabled')
             pointsPerClick = pointsPerClick/2;
+            perSeconds.innerHTML = pointsPerClick;
         }
         // clearInterval(desableContainerTimer)
    }
@@ -230,5 +254,14 @@ window.addEventListener('load', () => {
     loader.classList.add('fonduOut');
 })
 
+
+// // test gray image until unlocked
+// multi_1.addEventListener('click',()=> {
+//     function FunctionGrayEarth() {
+//     if(total<=14*counter_price_1) {
+//         const list = document.getElementById("idEarth");
+//     }
+//     list.add("disabled-img");
+// }})
 
 

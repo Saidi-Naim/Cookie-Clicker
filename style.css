@@ -60,7 +60,7 @@
     transition: opacity 0.5s ease-out;
 }
 body{
-    background-image: url(./assets/galaxy.jpg);
+    background-image: url(./assets/galaxy1.jpg);
     background-size: cover;
     background-repeat: repeat;
     color: white;
@@ -92,12 +92,10 @@ body{
     mix-blend-mode: multiply;
     padding-left: 1%;
 }
-
 .mainContainer{
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
 }
-
 /* Bonus container */
 .score{
     grid-column: 3;
@@ -116,7 +114,11 @@ body{
     display: flex;
     list-style-type: none;
     margin-left: 10%;
+<<<<<<< HEAD
+    margin-bottom: 15;
+=======
     margin-bottom: 27%;
+>>>>>>> 5476eb7ae07be314626662cb7c6bbd44b30c323b
 }
 .score li{
     display: flex;
@@ -148,14 +150,12 @@ body{
     margin-top: 3%;
     grid-column: 2;
 }
-
 .mainCounter{
     justify-content: center;
     padding: 1%;
     margin: 5%;
     grid-column: 2;
 }
-
 .mainCounter img{
     transform: translateY(0px);
     animation: float 6s ease-in-out infinite;
@@ -213,12 +213,10 @@ body{
 .mainCounter p{
     font-size: 3em;
 }
-
 .mainContainer > .counter{
     justify-self: center;
     align-self: center;
 }
-
 .button1, .button2, .button3{
     padding-right: 5%;
     border: none;
@@ -239,11 +237,9 @@ body{
     text-align: right;
     opacity: 0.9;
 }
-
 .button {
     cursor: pointer;
 }
-
 .imageEarth, .imageMoon, .imageVenus, .imageNeptune, .imageSun {
     /* transition: transform 6s ease-in-out; */
     animation: rotation 6s infinite linear;
@@ -263,10 +259,8 @@ body{
     background-color: green;
     color: aliceblue;
 }
-.disabled { 
-    pointer-events: none;
-    background: #d11414;
-    color: #fff;
+.img-nonColor { 
+    filter: grayscale();
 }
 .green{
     background-color: green;
@@ -274,7 +268,6 @@ body{
 .white{
     color: white;
 }
-
 /* Processus de bonus */
 .progress-bar{
     display: block;
@@ -315,11 +308,25 @@ body{
     border: solid 1px gray;
     transform: rotate(180deg);
 }
-
+.show{
+    width: 120px;
+    height: 80px;
+}
+.hidden1{
+    position: absolute;
+    z-index: 5;
+}
+.hidden2{
+    position: absolute;
+    z-index: 5;
+}
+.hidden3{
+    position: absolute;
+    z-index: 5;
+}
 .desabled{
     display: none;
 }
-
 .reverse-timer{
     overflow: auto;
     animation: timer 30s linear forwards;
@@ -353,7 +360,6 @@ body{
     position: absolute;
     transform: rotate(180deg);
 }
-
 /* bonus display instructions on hover */
 .hide {
     display: none;
@@ -367,14 +373,12 @@ body{
     z-index: 2;
     text-align: right;
 }
-
 .elementHide:hover + .hide {
     display: inline-block;
     position: absolute;
     color:#ffbe01;
     font-size: 0.7em;
 }
-
 .elementHide {
     margin-right: 20%;
     text-align: left;
@@ -388,11 +392,9 @@ body{
     color:#ffbe01;
     font-size: 0.7em;
 }
-
 .multiplier5, .multiplier4, .multiplier3, .multiplier2, .multiplier1 {
     display: none;
 }
-
 .bonus1:hover {
     color:#4169e1;
 }
@@ -408,7 +410,6 @@ body{
 .bonus5:hover {
     color:#ff4400;
 }
-
 .bonus1 span{
     position: absolute;
     float: left;
@@ -435,6 +436,56 @@ body{
     margin-left: 5px;
 }
 
+
 .disabled-img{
     filter: grayscale();
+}
+
+/* Media screen */ 
+@media screen and (min-width:300px) and (max-width: 768px) {
+    .mainContainer{
+        display: flex;
+        flex-direction: column;
+    }
+    .elementHide, .elementHide2{
+        display:none;
+    }
+    .title {
+        font-size: large;
+    }
+    .mainImage{
+        width: 90%;
+    }
+    ul{
+        display: flex;
+        flex-direction: row;
+    }
+    .score li{
+        margin-left: 3%;
+        margin-bottom: 6%;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .mainContainer{
+        display: flex;
+        flex-direction: column;
+    }
+    .elementHide, .elementHide2 {
+        display:none;
+    }
+    .title {
+        font-size: large;
+    }
+    .mainImage{
+        width: 90%;
+    }
+    ul{
+        display: flex;
+        flex-direction: row;
+    }
+    .score li{
+        margin-left: 3%;
+        margin-bottom: 6%;
+    }
 }
