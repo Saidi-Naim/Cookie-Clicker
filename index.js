@@ -224,22 +224,10 @@ idButton4.addEventListener('click' ,()=> {
         
     }
 })
-// const btnBon5 = document.querySelector('#idBonus5');
-// const visiblee = document.querySelector('.progress-bar');
-// const btn5 = document.querySelector('#idButton5');
-
-// btnBon5.addEventListener('click', () => {
-//     if(visiblee.style.display === 'none'){
-//         visiblee.style.display = 'block';
-//         document.btn5.disabled = true;
-//     }else{
-//         visiblee.style.display = 'none';
-//     }
-// })
 
 // Bonus 30 
 var container = document.querySelector('.container-timer')
-var timerBonus = document.querySelector('.reverse-timer');
+var timerBonus = document.querySelector('.reverse-timer')
 var idBonus5 = document.getElementById('idBonus5')
 var secoundCount = document.querySelector('.secound-count')
 idBonus5.addEventListener('click', ()=> {
@@ -301,19 +289,13 @@ document.onreadystatechange = function()
   };
 
 
-
-// test alert box with instructions
-
-    document.getElementById("buttonPlay").addEventListener("click", () => {
-        alert("Hi new astronaut! Collect the stars in the galaxy, you can get the help of the planets around you to collect faster, but if you do not have enough stars, they will not help.");
+// alert box with instructions
+    const buttonPlay = document.getElementById("buttonPlay");
+    buttonPlay.addEventListener('click', () => {
+        //alert then hide when clicked
+        alert("Hi new astronaut! \nCollect the stars in the galaxy. You can get the help of the planets around you to collect faster, but if you do not have enough stars, they will not help. \n                                          Good Luck!");
+        buttonPlay.style.display = 'none';
     })
-
-
-
-
-
-
-
 
 
 //// LOTTERY

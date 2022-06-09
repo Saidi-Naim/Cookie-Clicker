@@ -17,6 +17,7 @@
     <title>Cookie-Clicker</title>
 </head>
 <body>
+    <!-- Loading Page -->
     <div class="loading">
         <p class="imgLoaderContainer"><img src="./assets/astronaute.png" alt="astro"></p>
         <span class="letter">L</span>
@@ -27,8 +28,8 @@
         <span class="letter">N</span>
         <span class="letter">G</span>
     </div>
+    <!-- title -->
     <section class="titleContainer">
-        <img src="./assets/title4.jpg" alt="Galaxy">
         <h1 class="title">Space-Clicker</h1>
     </section>
     <!-- Container de toute la page -->
@@ -37,10 +38,10 @@
         <div class="mainCounter">
         <!-- Counter -->
         <p class="counter" id="idCounter">0</p>
-        <p class="secondsContainer"><span class="perSeconds">per Clic: </span><span class="perSeconds" id="perSeconds">1</span></p>
+        <p class="secondsContainer"><span class="perSeconds">per Clic: </span><span class="perSeconds" id="perSeconds"> 1</span></p>
         <!-- Main Button -->
         <button class="mainBtn" id="idMainBtn">
-            <img class="mainImage" src="./assets/astronaute.png" alt="astronaut"></button>
+            <img class="mainImage" draggable="false" src="./assets/astronaute.png" alt="astronaut"></button>
         </div>
         <div class="container-timer desabled">
             <div class="reverse-timer desabled">
@@ -56,7 +57,8 @@
                     <p class="hide">Each Earth doubles the energy.</p>
                     <div class="hidden1"></div>
                     <button class="button button1" id="idButton1">
-                        <img class="imageEarth" id="idEarth" src="./assets/icons/planet-earth-64.png"><span id="price1">015</span> 
+
+                        <img class="imageEarth" id="idEarth" draggable="false" src="./assets/icons/planet-earth-64.png"><span id="price1">015</span> 
 
                         <p class="multiplier1" id="idMultiplier1">x2</p>
                         <p class="nombreBonus1" id="idNombreBonus1">Stock x3</p>
@@ -66,7 +68,7 @@
                     <p class="elementHide">Moon</p>
                     <p class="hide">No gravity! One energy equals 5 here.</p>
                     <div class="hidden2"></div>
-                    <button class="button button2" id="idButton2"><img class="imageMoon" src="./assets/icons/moon.png" ><span id="price2">100</span> 
+                    <button class="button button2" id="idButton2"><img class="imageMoon" draggable="false" src="./assets/icons/moon.png" ><span id="price2">100</span> 
                         <p class="multiplier2" id="idMultiplier2"> x5</p>
                         <p class="nombreBonus2" id="idNombreBonus2">Stock x3</p>
                     </button>
@@ -75,7 +77,7 @@
                     <p class="elementHide">Mars</p>
                     <p class="hide">Faster on Mars! Make it 10 times faster.</p>
                     <div class="hidden3"></div>
-                    <button class=" button button3" id="idButton3"><img class="imageVenus" src="./assets/icons/venus.png"><span id="price3">300</span>  
+                    <button class=" button button3" id="idButton3"><img class="imageVenus" draggable="false" src="./assets/icons/venus.png"><span id="price3">300</span>  
                         <p class="multiplier3" id="idMultiplier3"> x10</p>
                         <p class="nombreBonus3" id="idNombreBonus3">Stock x3</p>
                     </button>
@@ -85,27 +87,21 @@
         <div class="scoreLeft">
             <ul>
                 <li class="bonus4" id="idBonus4">
-                    <button class="button button4" id="idButton4"><img class="imageNeptune" src="./assets/icons/neptune.png"><span id="price4">500</span>  
+                    <button class="button button4" id="idButton4"><img class="imageNeptune" draggable="false" src="./assets/icons/neptune.png"><span id="price4">500</span>  
                         <p class="multiplier4" id="idMultiplier4">Auto</p>
                     </button>
                 <p class="elementHide2">Neptune</p>
                 <p class="hide2">Save your energy! It auto generates for you.</p>
                 </li>
                 <li class="bonus5" id="idBonus5">
-                    <button class="button button5" id="idButton5"><img class="imageSun" src="./assets/icons/sun.png"><span id="price5">999</span>  
-                        <div class="progress-bar">
-                            <!-- <span class="number" data-value="30"></span> -->
-                            <svg height="100" width="100" class="circle">
-                                <circle cx="55" cy="55" r="40" stroke-width="10" fill="none" />
-                            </svg>
-                        </div>
+                    <button class="button button5" id="idButton5"><img class="imageSun" draggable="false" src="./assets/icons/sun.png"><span id="price5">999</span>  
                         <p class="multiplier5" id="idMultiplier5">200%</p>
                     </button>
                     <p class="elementHide2">Sun</p>
                     <p class="hide2">The Sun is so brilliant, your energy increases by 200% for 30 seconds.</p>
                 </li>
                 <li class="bonus6" id="idBonus6">
-                    <button class="button button6" id="idButton6"><img class="imageLottery" src="assets/icons/244core.png"><span id="price5">free</span>  
+                    <button class="button button6" id="idButton6"><img class="imageLottery" draggable="false" src="assets/icons/244core.png"><span id="price5">Free</span>  
                         <p class="multiplier6" id="idMultiplier6"></p>
                     </button>
                     <p class="elementHide2">244Core</p>
