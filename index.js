@@ -249,10 +249,20 @@ idBonus5.addEventListener('click', ()=> {
    }
 });
 // Loading 
-const loader = document.querySelector('.loading')
-window.addEventListener('load', () => {
-    loader.classList.add('fonduOut');
-})
+
+document.onreadystatechange = function() 
+  {
+    if (document.readyState != "complete") 
+    {
+      document.querySelector("body").style.visibility = "hidden";
+      document.querySelector(".loading").style.visibility = "visible";
+    } 
+    else 
+    {
+      document.querySelector(".loading").style.display = "none";
+      document.querySelector("body").style.visibility = "visible";
+    }
+  };
 
 
 // // test gray image until unlocked
