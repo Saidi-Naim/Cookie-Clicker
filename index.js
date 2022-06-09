@@ -1,8 +1,11 @@
 const display = document.getElementById('idCounter')
+const neptune = document.getElementById('neptune')
+const sun = document.getElementById('sun')
 var plus1Btn = document.getElementById('idMainBtn')
 var multi_1 = document.getElementById('idButton1')
 var multi_2 = document.getElementById('idButton2')
 var multi_3 = document.getElementById('idButton3')
+var multi_5 = document.getElementById('idButton5')
 var bouton_lottery = document.getElementById('idButton6')
 var display_stock_terre = document.getElementById('idNombreBonus1')
 
@@ -31,6 +34,8 @@ let counter_price_1 = 1;
 let counter_price_2 = 1;
 let counter_price_3 = 1;
 
+multi_5 = false;
+
 var pointsPerClick = 0;
 
 
@@ -38,7 +43,7 @@ var pointsPerClick = 0;
 function oneHandler(){
 
 /// check if lottery available
-if (total>5) { 
+if (total>120) { 
     lottery_field.style.visibility = "visible";}
 
 
@@ -46,7 +51,7 @@ if (total>5) {
 let bonus1 = document.querySelector('.bonus1')
 let imageEarth = document.querySelector('.imageEarth')
 let hidden1 = document.querySelector('.hidden1')
-if (counter_1==3)
+if (counter_1>=3)
 {
     let span1 = document.createElement('span');
     let text1 = document.createTextNode('You used all Earth');
@@ -61,7 +66,7 @@ if (counter_1==3)
 let imageMoon = document.querySelector('.imageMoon')
 let bonus2 = document.querySelector('.bonus2')
 let hidden2 = document.querySelector('.hidden2')
-if (counter_2==3)
+if (counter_2>=3)
 {
     let span2 = document.createElement('span');
     let text2 = document.createTextNode('No Moon anymore');
@@ -76,7 +81,7 @@ if (counter_2==3)
 let imageVenus = document.querySelector('.imageVenus')
 let bonus3 = document.querySelector('.bonus3')
 let hidden3 = document.querySelector('.hidden3')
-if (counter_3==3)
+if (counter_3>=3)
 {
     let span3 = document.createElement('span');
     let text3 = document.createTextNode('Mars is out');
@@ -89,45 +94,44 @@ if (counter_3==3)
 }
 
 // get points
-if (multi_1 == true && multi_2 == true && multi_3 == true)
+if (multi_5 == true)
+{
+    total = pointsPerClick + total;
+    display.innerHTML = total;
+}
+else if (multi_1 == true && multi_2 == true && multi_3 == true)
 {
     total = counter_1*2 + counter_2*5 + counter_3*10 + total; 
-    console.log (pointsPerClick);
     display.innerHTML = total;
     perSeconds.innerHTML = pointsPerClick;
 }
 else if (multi_1 == true && multi_2 == true)
 {
     total = counter_1*2 + counter_2*5 + total; 
-    console.log (pointsPerClick);
     display.innerHTML = total;
     perSeconds.innerHTML = pointsPerClick;
 }
 else if (multi_1 == true)
 {
     total = counter_1*2 +total; 
-    console.log (pointsPerClick);
     display.innerHTML = total;
     perSeconds.innerHTML = pointsPerClick;
 }   
 else if (multi_2 == true)   
 {
     total = counter_2*5+total; 
-    console.log (pointsPerClick);
     display.innerHTML = total;
     perSeconds.innerHTML = pointsPerClick;
 }
 else if (multi_3 == true)   
 {
     total = counter_3*10+total; 
-    console.log (pointsPerClick);
     display.innerHTML = total;
     perSeconds.innerHTML = pointsPerClick;
 }
 else
 {
     total += 1;
-    console.log (pointsPerClick);
     display.innerHTML = total;
 }}
     
@@ -161,6 +165,7 @@ function earth ()
         display_price_terre.innerHTML = `${counter_price_1*15}`}
         else 
         {
+
             display_price_terre.innerHTML = `the planet cost ${counter_price_1*15} stars. Collect more stars and come back!`
             setInterval(noMoney, 3000)
             function noMoney () {display_price_terre.innerHTML = `${counter_price_1*15}`
@@ -225,7 +230,8 @@ idButton4.addEventListener('click' ,()=> {
         {
             display_price_neptune.innerHTML = `the planet cost 500 stars. Collect more stars and come back!`
             setInterval(noMoney, 3000)
-            function noMoney () {display_price_neptune.innerHTML = `500`
+            function noMoney () {display_price_neptune.innerHTML = `500`;
+            neptune.innerHTML =``;
         }
         
     }
@@ -237,15 +243,14 @@ var timerBonus = document.querySelector('.reverse-timer')
 var idBonus5 = document.getElementById('idBonus5')
 var secoundCount = document.querySelector('.secound-count')
 idBonus5.addEventListener('click', ()=> {
-    if(total >= 5){
-        total -= 5;
-
-    pointsPerClick = pointsPerClick *2;
-    counter_1*2;
-    counter_2*2;
-    counter_3*2;
-    if (pointsPerClick==0)
-    { pointsPerClick = 2;}
+    if(total >= 999){
+        total -= 999;
+    multi_5 = true;
+    pointsPerClick = pointsPerClick *3;
+    counter_1*3;
+    counter_2*3;
+    counter_3*3;
+    perSeconds.innerHTML = pointsPerClick;
     container.classList.remove('desabled')
     timerBonus.classList.remove('desabled')
 
@@ -263,19 +268,19 @@ idBonus5.addEventListener('click', ()=> {
         var desableContainerTimer = setInterval(desable, 30000)
         function desable(){
             container.classList.add('desabled')
-            
-            perSeconds.innerHTML = pointsPerClick;
         }
         // clearInterval(desableContainerTimer)
    }
-   pointsPerClick = pointsPerClick/2;
+   
 }
    else {
         display_price_sun.innerHTML = `the planet cost 999 stars. Collect more stars and come back!`
         setInterval(noMoney, 3000)
-        function noMoney () {display_price_sun.innerHTML = `999`
+        function noMoney () {display_price_sun.innerHTML = `999`;
+        neptune.innerHTML =``;
    }
 }
+
 });
 // }});
 
