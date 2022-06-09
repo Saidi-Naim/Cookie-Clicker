@@ -238,4 +238,10 @@ idBonus5.addEventListener('click', ()=> {
 //     list.add("disabled-img");
 // }})
 
+// test alert box with instructions
+
+    document.getElementById("buttonPlay").addEventListener("click", () => {
+        alert("Hi new astronaut! Collect the stars in the galaxy, you can get the help of the planets around you to collect faster, but if you do not have enough stars, they will not help.");
+    })
+
 
