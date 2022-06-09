@@ -69,7 +69,7 @@ body{
     letter-spacing: 2px;
     margin: 1%;
     user-select: none;
-    overflow: hidden;
+    /* overflow: hidden; */
     animation: StarsAnimation 75s linear infinite;
 }
 /* Background animation */
@@ -244,7 +244,7 @@ body{
 .button {
     cursor: pointer;
 }
-.imageEarth, .imageMoon, .imageVenus, .imageNeptune, .imageSun {
+.imageEarth, .imageMoon, .imageVenus, .imageNeptune, .imageSun, .imageLottery {
     animation: rotation 6s infinite linear;
 }
 /* bonus animation */
@@ -385,37 +385,12 @@ body{
     color:#523f38;
 }
 
-.bonus1 span{
+.bonus1 span, .bonus2 span, .bonus3 span, .bonus4 span, .bonus5 span, .bonus6 span{
     position: absolute;
-    float: left;
-    margin-left: 5px;
-} 
-.bonus2 span{
-    position: absolute;
-    float: left;
-    margin-left: 5px;
-}
-.bonus3 span{
-    position: absolute;
-    float: left;
-    margin-left: 5px;
-}
-.bonus4 span{
-    position: absolute;
-    float: left;
-    margin-left: 5px;
-}
-.bonus5 span{
-    position: absolute;
-    float: left;
+    /* float: right; */
     margin-left: 5px;
 }
 
-.bonus6 span{
-    position: absolute;
-    float: left;
-    margin-left: 5px;
-}
 
 .disabled-img{
     filter: grayscale();
@@ -443,7 +418,15 @@ body{
     .score li{
         margin-left: 3%;
         margin-bottom: 3%;
-        margin-right: 7%;
+        margin-right: 4%;
+    }
+    .scoreLeft li{
+        margin-bottom: 0;
+        margin-left: 6%;
+    }
+    .bonus4, .bonus5, .bonus6{
+        padding-left:1%;
+        margin: 5%;
     }
     .loading{
         display: grid;
@@ -495,7 +478,7 @@ body{
     .score li{
         margin-left: 3%;
         margin-bottom: 3%;
-        margin-right: 7%;
+        margin-right: 5%;
     }
 }
 /* LOTTERY ANIMATION */
@@ -519,4 +502,17 @@ body{
 }
 #buttonPlay:hover{
     color:#ffbe01;
+}
+
+a:link{
+    color:#ffffff;
+}
+a:visited{
+    color:#ffffff;
+}
+a:hover{
+    color:#ffbe01;
+}
+.icons{
+    font-size: 135%;
 }

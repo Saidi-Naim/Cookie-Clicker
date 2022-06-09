@@ -58,7 +58,6 @@ if (counter_1>=3)
     span1.appendChild(text1)
     bonus1.appendChild(span1)
     span1.style.backgroundColor = 'red'
-    span1.style.padding= "2px 7px" ;
     imageEarth.classList.add('img-nonColor')
     hidden1.classList.add('show')
 }
@@ -73,7 +72,6 @@ if (counter_2>=3)
     span2.appendChild(text2)
     bonus2.appendChild(span2)
     span2.style.backgroundColor = 'red'
-    span2.style.padding= "2px 7px"
     imageMoon.classList.add('img-nonColor')
     hidden2.classList.add('show')
 }
@@ -88,7 +86,6 @@ if (counter_3>=3)
     span3.appendChild(text3)
     bonus3.appendChild(span3)
     span3.style.backgroundColor = 'red'
-    span3.style.padding= "2px 7px"
     imageVenus.classList.add('img-nonColor')
     hidden3.classList.add('show')
 }
@@ -231,7 +228,6 @@ idButton4.addEventListener('click' ,()=> {
             display_price_neptune.innerHTML = `the planet cost 500 stars. Collect more stars and come back!`
             setInterval(noMoney, 3000)
             function noMoney () {display_price_neptune.innerHTML = `500`;
-            neptune.innerHTML =``;
         }
         
     }
@@ -261,7 +257,7 @@ idBonus5.addEventListener('click', ()=> {
         secoundCount.innerHTML = text[counter];
         counter++;
         if (counter >= text.length) { 
-            // counter = 0;
+            counter = 0;
             clearInterval(inst); 
         
     }
@@ -277,7 +273,6 @@ idBonus5.addEventListener('click', ()=> {
         display_price_sun.innerHTML = `the planet cost 999 stars. Collect more stars and come back!`
         setInterval(noMoney, 3000)
         function noMoney () {display_price_sun.innerHTML = `999`;
-        neptune.innerHTML =``;
    }
 }
 
