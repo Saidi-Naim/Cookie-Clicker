@@ -274,7 +274,7 @@ bouton_lottery.addEventListener('click',lottery);
 
 function lottery () 
 {
-    alert ("    Lottery Game!\n You can win or lose between 1 and 10,000 stars with only one click.\n Are you sure ? You could Game over if your collect is negative.\n\n Click again on the planet to try your luck!");
+    alert ("\n                                       Lottery Game!\n\n You can win or lose between 1 and 10,000 stars with only one click.\n Are you sure ? You could Game over if your collect is negative.\n\n Click again on the planet to try your luck!");
     bouton_lottery.removeEventListener('click',lottery);
     if (bouton_lottery.addEventListener('click', ()=>
     {
