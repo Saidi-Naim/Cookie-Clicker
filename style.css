@@ -61,15 +61,14 @@
     transition: opacity 0.5s ease-out;
 }
 body{
-    background-image: url(./assets/galaxyCompress.jpg);
-    background-size: cover;
+    background-image: url(./assets/galaxy.webp);
+    background-size: contain;
     background-repeat: repeat;
     color: white;
     font-family: 'Kdam Thmor Pro', sans-serif;
     letter-spacing: 2px;
     margin: 1%;
     user-select: none;
-    /* overflow: hidden; */
     animation: StarsAnimation 75s linear infinite;
 }
 /* Background animation */
@@ -77,34 +76,8 @@ body{
     0%  {background-position: 0 0;}
     100%  {background-position: -2122px 0;}
   }
-.titleContainer{
-    width: 50%;
-    height: auto;
-    position: relative;
-    background-image: url(./assets/titleCompress.jpg);
-    animation: StarsAnimation 75s linear infinite;
-}
-.titleContainer img{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-}
-@keyframes galaxyAnimation {
-  
-    0%  {background-position: 0 0;}
-    100%  {background-position: -2122px 0;}
-  }
 .title{
-    width: 100%;
-    height: auto;
-    background-color: #000;
-    font-size:3em;
-    color: #fff;
-    mix-blend-mode: multiply;
-    padding-left: 1%;
+    opacity: 0.18;
 }
 .mainContainer{
     display: grid;
@@ -159,6 +132,7 @@ body{
     margin: auto;
     margin-top: 3%;
     grid-column: 2;
+    border-radius: 100%;
 }
 .mainCounter{
     justify-content: center;
@@ -431,7 +405,6 @@ body{
         align-items: center;
         width: 100%;
         height: 100%;
-
     }
     .containerLetter{
         justify-self: center;
@@ -478,6 +451,11 @@ body{
         position: absolute;
         /* float: right; */
         margin-left: 5px;
+    }
+}
+@media screen and (min-width: 413px) and (max-width: 737px){
+    .mainContainer{
+        margin-top: -45px;
     }
 }
 
