@@ -302,7 +302,7 @@ document.onreadystatechange = function()
     const buttonPlay = document.getElementById("buttonPlay");
     buttonPlay.addEventListener('click', () => {
         //alert then hide when clicked
-        alert("Hi new astronaut! \nCollect the stars in the galaxy. You can get the help of the planets around you to collect faster, but if you do not have enough stars, they will not help. \n                                          Good Luck!");
+        alert("Hi new astronaut! \nCollect the stars in the galaxy. You can get the help of the planets around you to collect faster, but if you do not have enough stars, they will not help you. \nAlso, they will request more stars as you ask, and there is a limited number of help. \n                                          Good Luck!");
         buttonPlay.style.display = 'none';
     })
 

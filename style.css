@@ -88,6 +88,7 @@ body{
     grid-column: 3;
     color: #ffbe01;
     margin: 1%;
+    margin-right:10%;
     position: relative;  
 }
 .scoreLeft {
@@ -120,7 +121,7 @@ body{
     margin: 10%;
 }
 .nombreBonus1, .nombreBonus2, .nombreBonus3, .nombreBonus4, .nombreBonus5, .nombreBonus6 {
-    margin-top: 6%;
+    margin-top: 16%;
 }
 /* Main click container */
 .mainBtn{
@@ -323,7 +324,7 @@ body{
     text-align: left;
 }
 .elementHide2 {
-    margin-left: 30%;
+    margin-left: 40%;
 }
 .elementHide2:hover + .hide2 {
     display: inline-block;
@@ -355,10 +356,9 @@ body{
 
 .bonus1 span, .bonus2 span, .bonus3 span, .bonus4 span, .bonus5 span, .bonus6 span{
     position: absolute;
-    /* float: right; */
+    /* float: right;  */
     margin-left: 5px;
-}
-
+} 
 
 .disabled-img{
     filter: grayscale();
@@ -382,6 +382,10 @@ body{
     ul{
         display: flex;
         flex-direction: row;
+        justify-content: center;
+    }
+    .score{
+        margin-right:0;
     }
     .score li{
         margin-left: 3%;
@@ -394,8 +398,16 @@ body{
     }
     .bonus4, .bonus5, .bonus6{
         padding-left:1%;
-        margin: 5%;
+        margin: 6%;
     }
+    .nombreBonus1, .nombreBonus2, .nombreBonus3, .nombreBonus4, .nombreBonus5, .nombreBonus6 {
+        margin-top: 9%;
+    }
+    .bonus1 span, .bonus2 span, .bonus3 span, .bonus4 span, .bonus5 span, .bonus6 span{
+        position: absolute;
+        /* float: right;  */
+        font-size: xx-small;
+    } 
     .loading{
         display: grid;
         grid-template-rows: minmax(50px, auto);
@@ -420,8 +432,20 @@ body{
     }
     .imgLoaderContainer img{
         margin-top: -100px;
+    }  
+}
+
+@media screen and (min-width:301px) and (max-width:500px) {
+    .nombreBonus1, .nombreBonus2, .nombreBonus3, .nombreBonus4, .nombreBonus5, .nombreBonus6 {
+        margin-top: 13%;
+        margin-left:-3%;
+        font-size: xx-small;
     }
-    
+    .bonus1 span, .bonus2 span, .bonus3 span, .bonus4 span, .bonus5 span, .bonus6 span{
+        position: absolute;
+        /* float: right;  */
+        font-size: xx-small;
+    }
 }
 
 @media screen and (max-width: 300px) {
@@ -433,10 +457,10 @@ body{
         display:none;
     }
     .title {
-        font-size: large;
+        font-size: medium;
     }
     .mainImage{
-        width: 90%;
+        width: 80%;
     }
     ul{
         display: flex;
@@ -451,6 +475,10 @@ body{
         position: absolute;
         /* float: right; */
         margin-left: 5px;
+        font-size:xx-small;
+    }
+    .nombreBonus1, .nombreBonus2, .nombreBonus3, .nombreBonus4, .nombreBonus5, .nombreBonus6 {
+        display: none;
     }
 }
 @media screen and (min-width: 413px) and (max-width: 737px){
