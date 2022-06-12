@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name='description' content='cookie game'
     <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="./assets/astronaute.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/astronaute.png">
     <!-- link style.css -->
@@ -19,7 +20,7 @@
 <body>
     <!-- Loading Page -->
     <div class="loading">
-        <p class="imgLoaderContainer"><img src="./assets/astronaute.png" alt="astro"></p>
+        <p class="imgLoaderContainer"><img src="./assets/astronaute.webp" alt="astro"></p>
         <div class="containerLetter">       
         <span class="letter">L</span>
         <span class="letter">O</span>
@@ -32,9 +33,7 @@
 
     </div>
     <!-- title -->
-    <section class="titleContainer">
         <h1 class="title">Space-Clicker</h1>
-    </section>
     <!-- Container de toute la page -->
     <main class="mainContainer" id="idMainContainer">
         <!-- Container counter button -->
@@ -44,7 +43,7 @@
         <p class="secondsContainer"><span class="perSeconds">per Clic: </span><span class="perSeconds" id="perSeconds"> 1</span></p>
         <!-- Main Button -->
         <button class="mainBtn" id="idMainBtn">
-            <img class="mainImage" draggable="false" src="./assets/astronaute.png" alt="astronaut"></button>
+            <img class="mainImage" draggable="false" src="./assets/astronaute.webp" alt="astronaut"></button>
         </div>
         <div class="container-timer desabled">
             <div class="reverse-timer desabled">
@@ -61,7 +60,7 @@
                     <div class="hidden1"></div>
                     <button class="button button1" id="idButton1">
 
-                        <img class="imageEarth" id="idEarth" draggable="false" src="./assets/icons/planet-earth-64.png" alt="ico-earth"><span class="price1class" id="price1">015</span> 
+                        <img class="imageEarth" id="idEarth" draggable="false" src="./assets/icons/planet-earth-64.webp" alt="ico-earth"><span id="price1" class="price1class">015</span> 
 
                         <span class="multiplier1" id="idMultiplier1">x2</span>
                         <span class="nombreBonus1" id="idNombreBonus1">Stock x3</span>
@@ -71,7 +70,7 @@
                     <p class="elementHide">Moon</p>
                     <p class="hide">No gravity! One energy equals 5 here.</p>
                     <div class="hidden2"></div>
-                    <button class="button button2" id="idButton2"><img class="imageMoon" draggable="false" src="./assets/icons/moon.png" alt="ico-moon"><span class="price2class" id="price2">100</span> 
+                    <button class="button button2" id="idButton2"><img class="imageMoon" draggable="false" src="./assets/icons/moon.webp" alt="ico-moon"><span id="price2" class="price2class">100</span> 
                         <span class="multiplier2" id="idMultiplier2"> x5</span>
                         <span class="nombreBonus2" id="idNombreBonus2">Stock x3</span>
                     </button>
@@ -80,7 +79,7 @@
                     <p class="elementHide">Mars</p>
                     <p class="hide">Faster on Mars! Make it 10 times faster.</p>
                     <div class="hidden3"></div>
-                    <button class=" button button3" id="idButton3"><img class="imageVenus" draggable="false" src="./assets/icons/venus.png" alt="venus"><span class="price3class" id="price3">300</span>  
+                    <button class=" button button3" id="idButton3"><img class="imageVenus" draggable="false" src="./assets/icons/venus.webp" alt="venus"><span id="price3" class="price3class">300</span>  
                         <span class="multiplier3" id="idMultiplier3"> x10</span>
                         <span class="nombreBonus3" id="idNombreBonus3">Stock x3</span>
                     </button>
@@ -90,21 +89,21 @@
         <div class="scoreLeft">
             <ul>
                 <li class="bonus4" id="idBonus4">
-                    <button class="button button4" id="idButton4"><img class="imageNeptune" draggable="false" src="./assets/icons/neptune.png" alt="ico-neptune"><span class="price4class" id="price4">500</span>  
+                    <button class="button button4" id="idButton4"><img class="imageNeptune" draggable="false" src="./assets/icons/neptune.webp" alt="ico-neptune"><span id="price4" class="price4class">500</span>  
                         <span class="multiplier4" id="idMultiplier4">Auto</span>
                     </button>
                 <p class="elementHide2" id="neptune">Neptune</p>
                 <p class="hide2">Save your energy! It auto generates for you.</p>
                 </li>
                 <li class="bonus5" id="idBonus5">
-                    <button class="button button5" id="idButton5"><img class="imageSun" draggable="false" src="./assets/icons/sun.png" alt="ico-sun"><span class="price5class" id="price5">999</span>  
+                    <button class="button button5" id="idButton5"><img class="imageSun" draggable="false" src="./assets/icons/sun.webp" alt="ico-sun"><span id="price5" class="price5class">999</span>  
                         <span class="multiplier5" id="idMultiplier5">200%</span>
                     </button>
                     <p class="elementHide2" id="sun">Sun</p>
                     <p class="hide2">The Sun is so brilliant, your energy increases by 200% for 30 seconds.</p>
                 </li>
                 <li class="bonus6" id="idBonus6">
-                    <button class="button button6" id="idButton6"><img class="imageLottery" draggable="false" src="./assets/icons/jupiter 2.png" alt="jupiter"><span class="price6class" id="price6">Free</span>  
+                    <button class="button button6" id="idButton6"><img class="imageLottery" draggable="false" src="./assets/icons/244core.webp" alt="jupiter"><span id="price6" class="price6class">Free</span>  
                         <span class="multiplier6" id="idMultiplier6"></span>
                     </button>
                     <p class="elementHide2">244Core</p>
@@ -121,7 +120,8 @@
         </div>
         <div class="icons">
         <i class="fa-regular fa-copyright"></i> 
-        <a href="https://github.com/Saidi-Naim/Cookie-Clicker"><i class="fa-brands fa-github"></i></a>
+        <a  type="url" href="https://github.com/Saidi-Naim/Cookie-Clicker">
+            <i class="fa-brands fa-github" ></i></a>
         </div>
     </footer>
     <!-- link script js -->
