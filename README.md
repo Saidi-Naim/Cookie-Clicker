@@ -1,4 +1,4 @@
-# Cookie-Clicker
+# **Cookie-Clicker**
 ### Team collaborators: 
 - Guillaume Breyer      
 - Sophie Cheng    
@@ -7,7 +7,7 @@
    
 ### Link:  https://saidi-naim.github.io/Cookie-Clicker/
 ### The mission:     
- The challenge is to create a Cookie Clicker (game) as a team. We made a variant of the game, Space-themed. 
+ The challenge is to create a Cookie Clicker (game) as a team. (https://orteil.dashnet.org/cookieclicker/) We made a variant of the game, Space-themed. 
 #### Where: BeCode Brussels
 #### When: 9 June 2022
 #### Technologies used: HTML/CSS/JS 
@@ -53,9 +53,9 @@ Make it so that, if the player doesn’t have the points to purchase a multiplie
 Your cookie clicker must be pretty, make it look good with CSS or some extra JavaScript.
 
 #### Pending:
-    Improve responsive design
-    Simplify Javascript code
-    Resolve bug on bonus button
+    - Improve responsive design
+    - Simplify Javascript code
+    - Resolve bug on bonus button
 
 ##### Image credit:
 Background  image of galaxy by Francesco Ungaro on Pexels.   
@@ -63,10 +63,9 @@ Images from FlatIcons.
 
 ### Loading Page:
 ![Loading](./assets/img-readme/loadingPage.png "Space-Clicker Loading page")
-### Image of the game:
+### Game:
 ![Space-Clicker game example](./assets/img-readme/space.png "Space-Clicker game example")
 
 
-#### Thank you for reading. 
+#### Thank you for reading and enjoy the game! :stars:   
 ![Astro](./assets/img-readme/astroGif.gif "Astro Giffer")
-
