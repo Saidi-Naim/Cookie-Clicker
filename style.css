@@ -134,6 +134,7 @@ body{
     margin-top: 3%;
     grid-column: 2;
     border-radius: 100%;
+    touch-action: manipulation;
 }
 .mainCounter{
     justify-content: center;
@@ -161,6 +162,7 @@ body{
     height: auto; 
     cursor: pointer;
     margin-top: 10%;
+    touch-action: manipulation;
 }
 .counter{
     display: flex;
@@ -378,6 +380,7 @@ body{
     }
     .mainImage{
         width: 90%;
+        touch-action: manipulation;
     }
     ul{
         display: flex;
@@ -461,6 +464,7 @@ body{
     }
     .mainImage{
         width: 80%;
+        touch-action: manipulation;
     }
     ul{
         display: flex;
